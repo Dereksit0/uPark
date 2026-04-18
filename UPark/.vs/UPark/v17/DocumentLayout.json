@@ -1,51 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\derek\\Moviles\\UPARK\\uPark\\UPark\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\derek\\Moviles\\UPARK\\uPark\\UPark\\UPark.Migrations\\Migrations\\20260418194934_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:UPark.Migrations\\Migrations\\20260418194934_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{390732B3-C782-41B5-AC9B-01179E57A47B}|UPark.Migrations\\UPark.Migrations.csproj|c:\\users\\derek\\moviles\\upark\\upark\\upark\\upark.migrations\\uparkdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{390732B3-C782-41B5-AC9B-01179E57A47B}|UPark.Migrations\\UPark.Migrations.csproj|solutionrelative:upark.migrations\\uparkdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{390732B3-C782-41B5-AC9B-01179E57A47B}|UPark.Migrations\\UPark.Migrations.csproj|c:\\users\\derek\\moviles\\upark\\upark\\upark\\upark.migrations\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{390732B3-C782-41B5-AC9B-01179E57A47B}|UPark.Migrations\\UPark.Migrations.csproj|solutionrelative:upark.migrations\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EBA3C025-2BCC-4EAB-AC93-3D3411D4C328}|UPark.Data\\UPark.Data.csproj|c:\\users\\derek\\moviles\\upark\\upark\\upark\\upark.data\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EBA3C025-2BCC-4EAB-AC93-3D3411D4C328}|UPark.Data\\UPark.Data.csproj|solutionrelative:upark.data\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EBA3C025-2BCC-4EAB-AC93-3D3411D4C328}|UPark.Data\\UPark.Data.csproj|c:\\users\\derek\\moviles\\upark\\upark\\upark\\upark.data\\models\\notificacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EBA3C025-2BCC-4EAB-AC93-3D3411D4C328}|UPark.Data\\UPark.Data.csproj|solutionrelative:upark.data\\models\\notificacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EBA3C025-2BCC-4EAB-AC93-3D3411D4C328}|UPark.Data\\UPark.Data.csproj|c:\\users\\derek\\moviles\\upark\\upark\\upark\\upark.data\\models\\estacionamiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EBA3C025-2BCC-4EAB-AC93-3D3411D4C328}|UPark.Data\\UPark.Data.csproj|solutionrelative:upark.data\\models\\estacionamiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EBA3C025-2BCC-4EAB-AC93-3D3411D4C328}|UPark.Data\\UPark.Data.csproj|c:\\users\\derek\\moviles\\upark\\upark\\upark\\upark.data\\models\\espacio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EBA3C025-2BCC-4EAB-AC93-3D3411D4C328}|UPark.Data\\UPark.Data.csproj|solutionrelative:upark.data\\models\\espacio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D4BE4FA-4319-4DA5-A3DD-FE5428388B96}|UPark\\UPark.csproj|c:\\users\\derek\\moviles\\upark\\upark\\upark\\upark\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D4BE4FA-4319-4DA5-A3DD-FE5428388B96}|UPark\\UPark.csproj|solutionrelative:upark\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D4BE4FA-4319-4DA5-A3DD-FE5428388B96}|UPark\\UPark.csproj|c:\\users\\derek\\moviles\\upark\\upark\\upark\\upark\\upark.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{9D4BE4FA-4319-4DA5-A3DD-FE5428388B96}|UPark\\UPark.csproj|solutionrelative:upark\\upark.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EBA3C025-2BCC-4EAB-AC93-3D3411D4C328}|UPark.Data\\UPark.Data.csproj|c:\\users\\derek\\moviles\\upark\\upark\\upark\\upark.data\\context\\uparkdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EBA3C025-2BCC-4EAB-AC93-3D3411D4C328}|UPark.Data\\UPark.Data.csproj|solutionrelative:upark.data\\context\\uparkdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\derek\\.nuget\\packages\\communitytoolkit.maui\\8.0.0\\ReadMe.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -53,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,149 +22,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20260418194934_InitialCreate.cs",
-              "DocumentMoniker": "C:\\Users\\derek\\Moviles\\UPARK\\uPark\\UPark\\UPark.Migrations\\Migrations\\20260418194934_InitialCreate.cs",
-              "RelativeDocumentMoniker": "UPark.Migrations\\Migrations\\20260418194934_InitialCreate.cs",
-              "ToolTip": "C:\\Users\\derek\\Moviles\\UPARK\\uPark\\UPark\\UPark.Migrations\\Migrations\\20260418194934_InitialCreate.cs",
-              "RelativeToolTip": "UPark.Migrations\\Migrations\\20260418194934_InitialCreate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T19:49:34.784Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UPark",
-              "DocumentMoniker": "C:\\Users\\derek\\Moviles\\UPARK\\uPark\\UPark\\UPark\\UPark.csproj",
-              "RelativeDocumentMoniker": "UPark\\UPark.csproj",
-              "ToolTip": "C:\\Users\\derek\\Moviles\\UPARK\\uPark\\UPark\\UPark\\UPark.csproj",
-              "RelativeToolTip": "UPark\\UPark.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-04-18T19:43:25.395Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MauiProgram.cs",
-              "DocumentMoniker": "C:\\Users\\derek\\Moviles\\UPARK\\uPark\\UPark\\UPark\\MauiProgram.cs",
-              "RelativeDocumentMoniker": "UPark\\MauiProgram.cs",
-              "ToolTip": "C:\\Users\\derek\\Moviles\\UPARK\\uPark\\UPark\\UPark\\MauiProgram.cs",
-              "RelativeToolTip": "UPark\\MauiProgram.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAowBUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T19:41:11.289Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UParkDbContextFactory.cs",
-              "DocumentMoniker": "C:\\Users\\derek\\Moviles\\UPARK\\uPark\\UPark\\UPark.Migrations\\UParkDbContextFactory.cs",
-              "RelativeDocumentMoniker": "UPark.Migrations\\UParkDbContextFactory.cs",
-              "ToolTip": "C:\\Users\\derek\\Moviles\\UPARK\\uPark\\UPark\\UPark.Migrations\\UParkDbContextFactory.cs",
-              "RelativeToolTip": "UPark.Migrations\\UParkDbContextFactory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T19:38:13.412Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\derek\\Moviles\\UPARK\\uPark\\UPark\\UPark.Migrations\\Program.cs",
-              "RelativeDocumentMoniker": "UPark.Migrations\\Program.cs",
-              "ToolTip": "C:\\Users\\derek\\Moviles\\UPARK\\uPark\\UPark\\UPark.Migrations\\Program.cs",
-              "RelativeToolTip": "UPark.Migrations\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T19:37:47.52Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Espacio.cs",
-              "DocumentMoniker": "C:\\Users\\derek\\Moviles\\UPARK\\uPark\\UPark\\UPark.Data\\Models\\Espacio.cs",
-              "RelativeDocumentMoniker": "UPark.Data\\Models\\Espacio.cs",
-              "ToolTip": "C:\\Users\\derek\\Moviles\\UPARK\\uPark\\UPark\\UPark.Data\\Models\\Espacio.cs",
-              "RelativeToolTip": "UPark.Data\\Models\\Espacio.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T19:36:13.115Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Estacionamiento.cs",
-              "DocumentMoniker": "C:\\Users\\derek\\Moviles\\UPARK\\uPark\\UPark\\UPark.Data\\Models\\Estacionamiento.cs",
-              "RelativeDocumentMoniker": "UPark.Data\\Models\\Estacionamiento.cs",
-              "ToolTip": "C:\\Users\\derek\\Moviles\\UPARK\\uPark\\UPark\\UPark.Data\\Models\\Estacionamiento.cs",
-              "RelativeToolTip": "UPark.Data\\Models\\Estacionamiento.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T19:35:47.721Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Notificacion.cs",
-              "DocumentMoniker": "C:\\Users\\derek\\Moviles\\UPARK\\uPark\\UPark\\UPark.Data\\Models\\Notificacion.cs",
-              "RelativeDocumentMoniker": "UPark.Data\\Models\\Notificacion.cs",
-              "ToolTip": "C:\\Users\\derek\\Moviles\\UPARK\\uPark\\UPark\\UPark.Data\\Models\\Notificacion.cs",
-              "RelativeToolTip": "UPark.Data\\Models\\Notificacion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T19:36:38.026Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\derek\\Moviles\\UPARK\\uPark\\UPark\\UPark.Data\\Models\\Usuario.cs",
-              "RelativeDocumentMoniker": "UPark.Data\\Models\\Usuario.cs",
-              "ToolTip": "C:\\Users\\derek\\Moviles\\UPARK\\uPark\\UPark\\UPark.Data\\Models\\Usuario.cs",
-              "RelativeToolTip": "UPark.Data\\Models\\Usuario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T19:35:20.057Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UParkDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\derek\\Moviles\\UPARK\\uPark\\UPark\\UPark.Data\\Context\\UParkDbContext.cs",
-              "RelativeDocumentMoniker": "UPark.Data\\Context\\UParkDbContext.cs",
-              "ToolTip": "C:\\Users\\derek\\Moviles\\UPARK\\uPark\\UPark\\UPark.Data\\Context\\UParkDbContext.cs",
-              "RelativeToolTip": "UPark.Data\\Context\\UParkDbContext.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAADwvxwAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T19:37:01.458Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ReadMe.txt",
-              "DocumentMoniker": "C:\\Users\\derek\\.nuget\\packages\\communitytoolkit.maui\\8.0.0\\ReadMe.txt",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\.nuget\\packages\\communitytoolkit.maui\\8.0.0\\ReadMe.txt",
-              "ToolTip": "C:\\Users\\derek\\.nuget\\packages\\communitytoolkit.maui\\8.0.0\\ReadMe.txt",
-              "RelativeToolTip": "..\\..\\..\\..\\.nuget\\packages\\communitytoolkit.maui\\8.0.0\\ReadMe.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2026-04-18T19:34:06.723Z",
-              "EditorCaption": ""
             }
           ]
         },

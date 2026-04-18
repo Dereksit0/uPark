@@ -328,3 +328,4 @@ C:\Users\derek\Moviles\UPARK\uPark\UPark\UPark\obj\Debug\net9.0-ios\iossimulator
 C:\Users\derek\Moviles\UPARK\uPark\UPark\UPark\obj\Debug\net9.0-ios\iossimulator-x64\UPark.pdb
 C:\Users\derek\Moviles\UPARK\uPark\UPark\UPark\obj\Debug\net9.0-ios\iossimulator-x64\UPark.genruntimeconfig.cache
 C:\Users\derek\Moviles\UPARK\uPark\UPark\UPark\obj\Debug\net9.0-ios\iossimulator-x64\ref\UPark.dll
+C:\Users\derek\Moviles\UPARK\uPark\UPark\UPark\obj\Debug\net9.0-ios\iossimulator-x64\build-signature\signature

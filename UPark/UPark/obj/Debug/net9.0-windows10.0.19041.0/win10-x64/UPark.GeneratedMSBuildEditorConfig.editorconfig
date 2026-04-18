@@ -53,3 +53,39 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = UPark.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/derek/Moviles/UPARK/uPark/UPark/UPark/Views/DetalleEspacioPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = UPark.Views.DetalleEspacioPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\DetalleEspacioPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\DetalleEspacioPage.xaml
+
+[C:/Users/derek/Moviles/UPARK/uPark/UPark/UPark/Views/HomePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = UPark.Views.HomePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\HomePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\HomePage.xaml
+
+[C:/Users/derek/Moviles/UPARK/uPark/UPark/UPark/Views/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = UPark.Views.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\LoginPage.xaml
+
+[C:/Users/derek/Moviles/UPARK/uPark/UPark/UPark/Views/MapaPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = UPark.Views.MapaPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\MapaPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\MapaPage.xaml
+
+[C:/Users/derek/Moviles/UPARK/uPark/UPark/UPark/Views/MiCuentaPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = UPark.Views.MiCuentaPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\MiCuentaPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\MiCuentaPage.xaml
+
+[C:/Users/derek/Moviles/UPARK/uPark/UPark/UPark/Views/NotificacionesPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = UPark.Views.NotificacionesPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\NotificacionesPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\NotificacionesPage.xaml

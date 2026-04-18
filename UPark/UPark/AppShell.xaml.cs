@@ -1,10 +1,12 @@
-﻿namespace UPark
+﻿namespace UPark;
+
+public partial class AppShell : Shell
 {
-    public partial class AppShell : Shell
+    public AppShell()
     {
-        public AppShell()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+
+        Routing.RegisterRoute("MapaPage", typeof(Views.MapaPage));
+        Routing.RegisterRoute("DetalleEspacioPage", typeof(Views.DetalleEspacioPage));
     }
 }

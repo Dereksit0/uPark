@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UPark.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+151141adbbd71f9378cd1792f724a0184d056199")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d96be9663dec7673db2bf6a6a5863cd2b364166a")]
 [assembly: System.Reflection.AssemblyProductAttribute("UPark.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UPark.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

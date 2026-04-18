@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UPark.Views.HomePage"
+             BackgroundColor="#f5f5f5">
+
+    <Shell.TitleView>
+        <Label Text="U-PARK" FontSize="20" FontAttributes="Bold"
+               TextColor="White" VerticalOptions="Center" HorizontalOptions="Center"/>
+    </Shell.TitleView>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <Label Text="Bienvenido/a" FontSize="16" TextColor="Gray"/>
+            <Label Text="Seleccione Estacionamiento" FontSize="24" 
+                   FontAttributes="Bold" TextColor="#1a237e"/>
+
+            <!-- Card IMM -->
+            <Frame BackgroundColor="#1a237e" CornerRadius="15" Padding="0" HasShadow="True">
+                <VerticalStackLayout>
+                    <Grid BackgroundColor="#1565c0" Padding="15">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Frame Grid.Column="0" BackgroundColor="#0d47a1" 
+                               CornerRadius="25" WidthRequest="50" HeightRequest="50" Padding="0">
+                            <Label Text="IMM" TextColor="White" FontAttributes="Bold"
+                                   HorizontalOptions="Center" VerticalOptions="Center" FontSize="12"/>
+                        </Frame>
+                        <VerticalStackLayout Grid.Column="1" Margin="10,0" VerticalOptions="Center">
+                            <Label Text="Estacionamiento IMM" TextColor="White" 
+                                   FontAttributes="Bold" FontSize="16"/>
+                            <Label Text="Frente a la Universidad" TextColor="#90caf9" FontSize="13"/>
+                        </VerticalStackLayout>
+                    </Grid>
+                    <Button Text="✓  Lugares Disponibles"
+                            BackgroundColor="#1565c0"
+                            TextColor="White"
+                            FontSize="14"
+                            Margin="10"
+                            CornerRadius="8"
+                            Clicked="OnIMMClicked"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Card UMAD -->
+            <Frame BackgroundColor="#b71c1c" CornerRadius="15" Padding="0" HasShadow="True">
+                <VerticalStackLayout>
+                    <Grid BackgroundColor="#c62828" Padding="15">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Frame Grid.Column="0" BackgroundColor="#7f0000" 
+                               CornerRadius="25" WidthRequest="50" HeightRequest="50" Padding="0">
+                            <Label Text="UMAD" TextColor="White" FontAttributes="Bold"
+                                   HorizontalOptions="Center" VerticalOptions="Center" FontSize="10"/>
+                        </Frame>
+                        <VerticalStackLayout Grid.Column="1" Margin="10,0" VerticalOptions="Center">
+                            <Label Text="Estacionamiento UMAD" TextColor="White" 
+                                   FontAttributes="Bold" FontSize="16"/>
+                            <Label Text="Detrás de la Universidad" TextColor="#ef9a9a" FontSize="13"/>
+                        </VerticalStackLayout>
+                    </Grid>
+                    <Button Text="✓  Lugares Disponibles"
+                            BackgroundColor="#c62828"
+                            TextColor="White"
+                            FontSize="14"
+                            Margin="10"
+                            CornerRadius="8"
+                            Clicked="OnUMADClicked"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Botón Recargar -->
+            <Button Text="↺  RECARGAR"
+                    BackgroundColor="#c62828"
+                    TextColor="White"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    CornerRadius="10"
+                    HeightRequest="50"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Notificaciones" Clicked="OnNotificacionesClicked"/>
+    </ContentPage.ToolbarItems>
+
+</ContentPage>
