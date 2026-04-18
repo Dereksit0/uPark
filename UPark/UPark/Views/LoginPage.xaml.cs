@@ -11,7 +11,6 @@ public partial class LoginPage : ContentPage
     {
         bool hasError = false;
 
-        // Validación matrícula
         if (string.IsNullOrWhiteSpace(MatriculaEntry.Text))
         {
             MatriculaError.IsVisible = true;
@@ -22,7 +21,6 @@ public partial class LoginPage : ContentPage
             MatriculaError.IsVisible = false;
         }
 
-        // Validación contraseña
         if (string.IsNullOrWhiteSpace(ContrasenaEntry.Text))
         {
             ContrasenaError.IsVisible = true;
@@ -37,5 +35,15 @@ public partial class LoginPage : ContentPage
         {
             await Shell.Current.GoToAsync("//HomePage");
         }
+    }
+
+    private async void OnOlvidasteClicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("OlvidasteContrasenaPage");
+    }
+
+    private async void OnRegistrarseClicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("RegistroPage");
     }
 }

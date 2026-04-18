@@ -17,8 +17,9 @@ public partial class HomePage : ContentPage
         await Shell.Current.GoToAsync($"MapaPage?estacionamiento=UMAD");
     }
 
-    private async void OnNotificacionesClicked(object sender, EventArgs e)
+    private async void OnRefreshing(object sender, EventArgs e)
     {
-        await Shell.Current.GoToAsync("NotificacionesPage");
+        await Task.Delay(1500);
+        RefreshControl.IsRefreshing = false;
     }
 }

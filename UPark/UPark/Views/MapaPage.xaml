@@ -5,143 +5,134 @@
              BackgroundColor="#f5f5f5">
 
     <Shell.TitleView>
-        <Label x:Name="TituloEstacionamiento" Text="IMM Parking" FontSize="20" 
-               FontAttributes="Bold" TextColor="White" 
+        <Label x:Name="TituloEstacionamiento" Text="IMM Parking" FontSize="20"
+               FontAttributes="Bold" TextColor="White"
                VerticalOptions="Center" HorizontalOptions="Center"/>
     </Shell.TitleView>
 
-    <ScrollView>
-        <VerticalStackLayout Padding="15" Spacing="15">
+    <RefreshView x:Name="RefreshControl" Refreshing="OnRefreshing">
+        <ScrollView>
+            <VerticalStackLayout Padding="15" Spacing="15">
 
-            <!-- Mapa de espacios -->
-            <Frame BackgroundColor="White" CornerRadius="10" Padding="15" HasShadow="True">
-                <VerticalStackLayout Spacing="10">
+                <!-- Mapa de espacios -->
+                <Border BackgroundColor="White" StrokeShape="RoundRectangle 10" Padding="15">
+                    <VerticalStackLayout Spacing="10">
 
-                    <Label Text="Entrada" HorizontalOptions="Center" 
-                           FontSize="14" TextColor="Gray"/>
+                        <Label Text="Entrada" HorizontalOptions="Center"
+                               FontSize="14" TextColor="Gray"/>
 
-                    <!-- Fila 1 -->
-                    <FlexLayout Wrap="Wrap" JustifyContent="Center">
-                        <Frame BackgroundColor="#4caf50" WidthRequest="30" HeightRequest="30" 
-                               CornerRadius="5" Margin="2" Padding="0"/>
-                        <Frame BackgroundColor="#4caf50" WidthRequest="30" HeightRequest="30" 
-                               CornerRadius="5" Margin="2" Padding="0"/>
-                        <Frame BackgroundColor="#f44336" WidthRequest="30" HeightRequest="30" 
-                               CornerRadius="5" Margin="2" Padding="0"/>
-                        <Frame BackgroundColor="#f44336" WidthRequest="30" HeightRequest="30" 
-                               CornerRadius="5" Margin="2" Padding="0"/>
-                        <Frame BackgroundColor="#f44336" WidthRequest="30" HeightRequest="30" 
-                               CornerRadius="5" Margin="2" Padding="0"/>
-                        <Frame BackgroundColor="#4caf50" WidthRequest="30" HeightRequest="30" 
-                               CornerRadius="5" Margin="2" Padding="0"/>
-                        <Frame BackgroundColor="#f44336" WidthRequest="30" HeightRequest="30" 
-                               CornerRadius="5" Margin="2" Padding="0"/>
-                        <Frame BackgroundColor="#4caf50" WidthRequest="30" HeightRequest="30" 
-                               CornerRadius="5" Margin="2" Padding="0"/>
-                    </FlexLayout>
+                        <FlexLayout Wrap="Wrap" JustifyContent="Center">
+                            <Border BackgroundColor="#4caf50" WidthRequest="30" HeightRequest="30"
+                                    StrokeShape="RoundRectangle 5" Margin="2"/>
+                            <Border BackgroundColor="#4caf50" WidthRequest="30" HeightRequest="30"
+                                    StrokeShape="RoundRectangle 5" Margin="2"/>
+                            <Border BackgroundColor="#f44336" WidthRequest="30" HeightRequest="30"
+                                    StrokeShape="RoundRectangle 5" Margin="2"/>
+                            <Border BackgroundColor="#f44336" WidthRequest="30" HeightRequest="30"
+                                    StrokeShape="RoundRectangle 5" Margin="2"/>
+                            <Border BackgroundColor="#f44336" WidthRequest="30" HeightRequest="30"
+                                    StrokeShape="RoundRectangle 5" Margin="2"/>
+                            <Border BackgroundColor="#4caf50" WidthRequest="30" HeightRequest="30"
+                                    StrokeShape="RoundRectangle 5" Margin="2"/>
+                            <Border BackgroundColor="#f44336" WidthRequest="30" HeightRequest="30"
+                                    StrokeShape="RoundRectangle 5" Margin="2"/>
+                            <Border BackgroundColor="#4caf50" WidthRequest="30" HeightRequest="30"
+                                    StrokeShape="RoundRectangle 5" Margin="2"/>
+                        </FlexLayout>
 
-                    <!-- Fila 2 -->
-                    <FlexLayout Wrap="Wrap" JustifyContent="Center">
-                        <Frame BackgroundColor="#f44336" WidthRequest="30" HeightRequest="30" 
-                               CornerRadius="5" Margin="2" Padding="0"/>
-                        <Frame BackgroundColor="#f44336" WidthRequest="30" HeightRequest="30" 
-                               CornerRadius="5" Margin="2" Padding="0"/>
-                        <Frame BackgroundColor="#4caf50" WidthRequest="30" HeightRequest="30" 
-                               CornerRadius="5" Margin="2" Padding="0"/>
-                        <Frame BackgroundColor="#f44336" WidthRequest="30" HeightRequest="30" 
-                               CornerRadius="5" Margin="2" Padding="0"/>
-                        <Frame BackgroundColor="#4caf50" WidthRequest="30" HeightRequest="30" 
-                               CornerRadius="5" Margin="2" Padding="0"/>
-                        <Frame BackgroundColor="#f44336" WidthRequest="30" HeightRequest="30" 
-                               CornerRadius="5" Margin="2" Padding="0"/>
-                        <Frame BackgroundColor="#f44336" WidthRequest="30" HeightRequest="30" 
-                               CornerRadius="5" Margin="2" Padding="0"/>
-                        <Frame BackgroundColor="#4caf50" WidthRequest="30" HeightRequest="30" 
-                               CornerRadius="5" Margin="2" Padding="0"/>
-                    </FlexLayout>
+                        <FlexLayout Wrap="Wrap" JustifyContent="Center">
+                            <Border BackgroundColor="#f44336" WidthRequest="30" HeightRequest="30"
+                                    StrokeShape="RoundRectangle 5" Margin="2"/>
+                            <Border BackgroundColor="#f44336" WidthRequest="30" HeightRequest="30"
+                                    StrokeShape="RoundRectangle 5" Margin="2"/>
+                            <Border BackgroundColor="#4caf50" WidthRequest="30" HeightRequest="30"
+                                    StrokeShape="RoundRectangle 5" Margin="2"/>
+                            <Border BackgroundColor="#f44336" WidthRequest="30" HeightRequest="30"
+                                    StrokeShape="RoundRectangle 5" Margin="2"/>
+                            <Border BackgroundColor="#4caf50" WidthRequest="30" HeightRequest="30"
+                                    StrokeShape="RoundRectangle 5" Margin="2"/>
+                            <Border BackgroundColor="#f44336" WidthRequest="30" HeightRequest="30"
+                                    StrokeShape="RoundRectangle 5" Margin="2"/>
+                            <Border BackgroundColor="#f44336" WidthRequest="30" HeightRequest="30"
+                                    StrokeShape="RoundRectangle 5" Margin="2"/>
+                            <Border BackgroundColor="#4caf50" WidthRequest="30" HeightRequest="30"
+                                    StrokeShape="RoundRectangle 5" Margin="2"/>
+                        </FlexLayout>
 
-                    <!-- Leyenda -->
-                    <HorizontalStackLayout HorizontalOptions="Center" Spacing="20" Margin="0,10">
-                        <HorizontalStackLayout Spacing="5">
-                            <Frame BackgroundColor="#4caf50" WidthRequest="20" HeightRequest="20" 
-                                   CornerRadius="3" Padding="0"/>
-                            <Label Text="Libre" VerticalOptions="Center"/>
+                        <!-- Leyenda -->
+                        <HorizontalStackLayout HorizontalOptions="Center" Spacing="20" Margin="0,10">
+                            <HorizontalStackLayout Spacing="5">
+                                <Border BackgroundColor="#4caf50" WidthRequest="20" HeightRequest="20"
+                                        StrokeShape="RoundRectangle 3"/>
+                                <Label Text="Libre" VerticalOptions="Center"/>
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout Spacing="5">
+                                <Border BackgroundColor="#f44336" WidthRequest="20" HeightRequest="20"
+                                        StrokeShape="RoundRectangle 3"/>
+                                <Label Text="Ocupado" VerticalOptions="Center"/>
+                            </HorizontalStackLayout>
                         </HorizontalStackLayout>
-                        <HorizontalStackLayout Spacing="5">
-                            <Frame BackgroundColor="#f44336" WidthRequest="20" HeightRequest="20" 
-                                   CornerRadius="3" Padding="0"/>
-                            <Label Text="Ocupado" VerticalOptions="Center"/>
-                        </HorizontalStackLayout>
-                    </HorizontalStackLayout>
 
-                    <Label Text="Salida" HorizontalOptions="Center" 
-                           FontSize="14" TextColor="Gray"/>
-                </VerticalStackLayout>
-            </Frame>
+                        <Label Text="Salida" HorizontalOptions="Center"
+                               FontSize="14" TextColor="Gray"/>
+                    </VerticalStackLayout>
+                </Border>
 
-            <!-- Lista de espacios -->
-            <Label Text="Lista de Espacios" FontSize="18" 
-                   FontAttributes="Bold" TextColor="#1a237e"/>
+                <!-- Lista de espacios -->
+                <Label Text="Lista de Espacios" FontSize="18"
+                       FontAttributes="Bold" TextColor="#1a237e"/>
 
-            <Frame BackgroundColor="White" CornerRadius="10" Padding="15" HasShadow="True">
-                <VerticalStackLayout Spacing="10">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="Auto"/>
-                        </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0" Text="Espacio 5" FontAttributes="Bold" FontSize="15"/>
-                        <Label Grid.Column="1" Text="Libre" TextColor="#4caf50" FontAttributes="Bold"/>
-                    </Grid>
-                    <BoxView HeightRequest="1" BackgroundColor="#eeeeee"/>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="Auto"/>
-                        </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0" Text="Espacio 8" FontAttributes="Bold" FontSize="15"/>
-                        <Label Grid.Column="1" Text="Ocupado" TextColor="#f44336" FontAttributes="Bold"/>
-                    </Grid>
-                    <BoxView HeightRequest="1" BackgroundColor="#eeeeee"/>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="Auto"/>
-                        </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0" Text="Espacio 12" FontAttributes="Bold" FontSize="15"/>
-                        <Label Grid.Column="1" Text="Ocupado" TextColor="#f44336" FontAttributes="Bold"/>
-                    </Grid>
-                    <BoxView HeightRequest="1" BackgroundColor="#eeeeee"/>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="Auto"/>
-                        </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0" Text="Espacio 15" FontAttributes="Bold" FontSize="15"/>
-                        <Label Grid.Column="1" Text="Libre" TextColor="#4caf50" FontAttributes="Bold"/>
-                    </Grid>
-                    <BoxView HeightRequest="1" BackgroundColor="#eeeeee"/>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="Auto"/>
-                        </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0" Text="Espacio 20" FontAttributes="Bold" FontSize="15"/>
-                        <Label Grid.Column="1" Text="Ocupado" TextColor="#f44336" FontAttributes="Bold"/>
-                    </Grid>
-                </VerticalStackLayout>
-            </Frame>
+                <Border BackgroundColor="White" StrokeShape="RoundRectangle 10" Padding="15">
+                    <VerticalStackLayout Spacing="10">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text="Espacio 5" FontAttributes="Bold" FontSize="15"/>
+                            <Label Grid.Column="1" Text="Libre" TextColor="#4caf50" FontAttributes="Bold"/>
+                        </Grid>
+                        <BoxView HeightRequest="1" BackgroundColor="#eeeeee"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text="Espacio 8" FontAttributes="Bold" FontSize="15"/>
+                            <Label Grid.Column="1" Text="Ocupado" TextColor="#f44336" FontAttributes="Bold"/>
+                        </Grid>
+                        <BoxView HeightRequest="1" BackgroundColor="#eeeeee"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text="Espacio 12" FontAttributes="Bold" FontSize="15"/>
+                            <Label Grid.Column="1" Text="Ocupado" TextColor="#f44336" FontAttributes="Bold"/>
+                        </Grid>
+                        <BoxView HeightRequest="1" BackgroundColor="#eeeeee"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text="Espacio 15" FontAttributes="Bold" FontSize="15"/>
+                            <Label Grid.Column="1" Text="Libre" TextColor="#4caf50" FontAttributes="Bold"/>
+                        </Grid>
+                        <BoxView HeightRequest="1" BackgroundColor="#eeeeee"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text="Espacio 20" FontAttributes="Bold" FontSize="15"/>
+                            <Label Grid.Column="1" Text="Ocupado" TextColor="#f44336" FontAttributes="Bold"/>
+                        </Grid>
+                    </VerticalStackLayout>
+                </Border>
 
-            <!-- Botón Recargar -->
-            <Button Text="↺  RECARGAR"
-                    BackgroundColor="#c62828"
-                    TextColor="White"
-                    FontSize="16"
-                    FontAttributes="Bold"
-                    CornerRadius="10"
-                    HeightRequest="50"/>
-
-        </VerticalStackLayout>
-    </ScrollView>
+            </VerticalStackLayout>
+        </ScrollView>
+    </RefreshView>
 
 </ContentPage>

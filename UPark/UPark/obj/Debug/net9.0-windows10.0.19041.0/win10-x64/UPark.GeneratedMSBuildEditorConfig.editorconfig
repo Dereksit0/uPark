@@ -89,3 +89,15 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = UPark.Views.NotificacionesPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\NotificacionesPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\NotificacionesPage.xaml
+
+[C:/Users/derek/Moviles/UPARK/uPark/UPark/UPark/Views/OlvidasteContrasenaPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = UPark.Views.OlvidasteContrasenaPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\OlvidasteContrasenaPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\OlvidasteContrasenaPage.xaml
+
+[C:/Users/derek/Moviles/UPARK/uPark/UPark/UPark/Views/RegistroPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = UPark.Views.RegistroPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\RegistroPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\RegistroPage.xaml

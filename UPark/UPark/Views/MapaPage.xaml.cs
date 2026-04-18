@@ -19,4 +19,10 @@ public partial class MapaPage : ContentPage
     {
         InitializeComponent();
     }
+
+    private async void OnRefreshing(object sender, EventArgs e)
+    {
+        await Task.Delay(1500);
+        RefreshControl.IsRefreshing = false;
+    }
 }
