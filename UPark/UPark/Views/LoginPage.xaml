@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UPark.Views.LoginPage"
+             BackgroundColor="#1a237e">
+
+    <ContentPage.Resources>
+        <Style x:Key="EntryValido" TargetType="Entry">
+            <Setter Property="BackgroundColor" Value="White"/>
+            <Setter Property="TextColor" Value="Black"/>
+        </Style>
+        <Style x:Key="EntryInvalido" TargetType="Entry">
+            <Setter Property="BackgroundColor" Value="#ffebee"/>
+            <Setter Property="TextColor" Value="#c62828"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <Grid>
+        <!-- Imagen de fondo -->
+        <Image Source="splashscreen.png"
+               Aspect="AspectFill"
+               Opacity="0.15"
+               VerticalOptions="Fill"
+               HorizontalOptions="Fill"/>
+
+        <ScrollView>
+            <VerticalStackLayout Padding="30" Spacing="20" VerticalOptions="Center">
+
+                <Label Text="Acceso Estudiantes" FontSize="18"
+                       TextColor="#90caf9" HorizontalOptions="Center"/>
+
+                <!-- Campo Matrícula solo números -->
+                <Border StrokeShape="RoundRectangle 10"
+                        BackgroundColor="White"
+                        Padding="5">
+                    <Entry x:Name="MatriculaEntry"
+                           Placeholder="Matrícula (solo números)"
+                           PlaceholderColor="Gray"
+                           TextColor="Black"
+                           Keyboard="Numeric"
+                           FontSize="16"
+                           Margin="10,0"
+                           TextChanged="OnMatriculaTextChanged">
+                        <Entry.Triggers>
+                            <DataTrigger TargetType="Entry"
+                                         Binding="{Binding Source={x:Reference MatriculaError}, Path=IsVisible}"
+                                         Value="True">
+                                <Setter Property="BackgroundColor" Value="#ffebee"/>
+                                <Setter Property="TextColor" Value="#c62828"/>
+                            </DataTrigger>
+                            <DataTrigger TargetType="Entry"
+                                         Binding="{Binding Source={x:Reference MatriculaError}, Path=IsVisible}"
+                                         Value="False">
+                                <Setter Property="BackgroundColor" Value="White"/>
+                                <Setter Property="TextColor" Value="Black"/>
+                            </DataTrigger>
+                        </Entry.Triggers>
+                    </Entry>
+                </Border>
+
+                <!-- Error Matrícula -->
+                <Label x:Name="MatriculaError"
+                       Text="⚠ La matrícula solo debe contener números"
+                       TextColor="#ff5252"
+                       FontSize="12"
+                       IsVisible="False"
+                       Margin="5,0"/>
+
+                <!-- Campo Contraseña con ojito -->
+                <Border StrokeShape="RoundRectangle 10"
+                        BackgroundColor="White"
+                        Padding="5">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Entry x:Name="ContrasenaEntry"
+                               Grid.Column="0"
+                               Placeholder="Contraseña"
+                               PlaceholderColor="Gray"
+                               TextColor="Black"
+                               IsPassword="True"
+                               FontSize="16"
+                               Margin="10,0">
+                            <Entry.Triggers>
+                                <DataTrigger TargetType="Entry"
+                                             Binding="{Binding Source={x:Reference ContrasenaError}, Path=IsVisible}"
+                                             Value="True">
+                                    <Setter Property="BackgroundColor" Value="#ffebee"/>
+                                    <Setter Property="TextColor" Value="#c62828"/>
+                                </DataTrigger>
+                                <DataTrigger TargetType="Entry"
+                                             Binding="{Binding Source={x:Reference ContrasenaError}, Path=IsVisible}"
+                                             Value="False">
+                                    <Setter Property="BackgroundColor" Value="White"/>
+                                    <Setter Property="TextColor" Value="Black"/>
+                                </DataTrigger>
+                            </Entry.Triggers>
+                        </Entry>
+                        <!-- Ojito -->
+                        <Label x:Name="OjitoLabel"
+                               Grid.Column="1"
+                               Text="👁"
+                               FontSize="20"
+                               VerticalOptions="Center"
+                               Margin="0,0,10,0">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnOjitoTapped"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </Grid>
+                </Border>
+
+                <!-- Error Contraseña -->
+                <Label x:Name="ContrasenaError"
+                       Text="⚠ La contraseña no puede estar vacía"
+                       TextColor="#ff5252"
+                       FontSize="12"
+                       IsVisible="False"
+                       Margin="5,0"/>
+
+                <!-- Botón Login -->
+                <Button Text="Iniciar Sesión"
+                        BackgroundColor="#1565c0"
+                        TextColor="White"
+                        FontSize="16"
+                        FontAttributes="Bold"
+                        CornerRadius="10"
+                        HeightRequest="50"
+                        Clicked="OnLoginClicked">
+                    <Button.Triggers>
+                        <DataTrigger TargetType="Button"
+                                     Binding="{Binding Source={x:Reference MatriculaError}, Path=IsVisible}"
+                                     Value="True">
+                            <Setter Property="BackgroundColor" Value="#455a64"/>
+                        </DataTrigger>
+                    </Button.Triggers>
+                </Button>
+
+                <!-- Olvidaste tu contraseña -->
+                <Label Text="¿Olvidaste tu contraseña?"
+                       TextColor="#90caf9"
+                       HorizontalOptions="Center"
+                       FontSize="14">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOlvidasteClicked"/>
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <!-- Registrarse -->
+                <HorizontalStackLayout HorizontalOptions="Center" Spacing="5">
+                    <Label Text="¿No tienes cuenta?"
+                           TextColor="White"
+                           FontSize="14"/>
+                    <Label Text="Regístrate aquí"
+                           TextColor="#90caf9"
+                           FontSize="14"
+                           FontAttributes="Bold">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnRegistrarseClicked"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </HorizontalStackLayout>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>

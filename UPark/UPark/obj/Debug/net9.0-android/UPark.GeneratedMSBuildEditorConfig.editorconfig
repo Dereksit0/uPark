@@ -1,0 +1,99 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = true
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net9.0-android
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkVersion = v9.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = UPark
+build_property.ProjectDir = C:\Users\derek\Moviles\UPARK\uPark\UPark\UPark\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/derek/Moviles/UPARK/uPark/UPark/UPark/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = UPark.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/derek/Moviles/UPARK/uPark/UPark/UPark/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = UPark.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/derek/Moviles/UPARK/uPark/UPark/UPark/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = UPark.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/derek/Moviles/UPARK/uPark/UPark/UPark/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = UPark.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/derek/Moviles/UPARK/uPark/UPark/UPark/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = UPark.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/derek/Moviles/UPARK/uPark/UPark/UPark/Views/DetalleEspacioPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = UPark.Views.DetalleEspacioPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\DetalleEspacioPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\DetalleEspacioPage.xaml
+
+[C:/Users/derek/Moviles/UPARK/uPark/UPark/UPark/Views/HomePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = UPark.Views.HomePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\HomePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\HomePage.xaml
+
+[C:/Users/derek/Moviles/UPARK/uPark/UPark/UPark/Views/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = UPark.Views.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\LoginPage.xaml
+
+[C:/Users/derek/Moviles/UPARK/uPark/UPark/UPark/Views/MapaPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = UPark.Views.MapaPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\MapaPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\MapaPage.xaml
+
+[C:/Users/derek/Moviles/UPARK/uPark/UPark/UPark/Views/MiCuentaPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = UPark.Views.MiCuentaPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\MiCuentaPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\MiCuentaPage.xaml
+
+[C:/Users/derek/Moviles/UPARK/uPark/UPark/UPark/Views/NotificacionesPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = UPark.Views.NotificacionesPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\NotificacionesPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\NotificacionesPage.xaml
+
+[C:/Users/derek/Moviles/UPARK/uPark/UPark/UPark/Views/OlvidasteContrasenaPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = UPark.Views.OlvidasteContrasenaPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\OlvidasteContrasenaPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\OlvidasteContrasenaPage.xaml
+
+[C:/Users/derek/Moviles/UPARK/uPark/UPark/UPark/Views/RegistroPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = UPark.Views.RegistroPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\RegistroPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\RegistroPage.xaml

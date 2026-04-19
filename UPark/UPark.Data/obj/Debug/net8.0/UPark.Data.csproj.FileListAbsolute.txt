@@ -1,0 +1,15 @@
+C:\Users\derek\Moviles\UPARK\uPark\UPark\UPark.Data\bin\Debug\net8.0\UPark.Data.deps.json
+C:\Users\derek\Moviles\UPARK\uPark\UPark\UPark.Data\bin\Debug\net8.0\UPark.Data.runtimeconfig.json
+C:\Users\derek\Moviles\UPARK\uPark\UPark\UPark.Data\bin\Debug\net8.0\UPark.Data.dll
+C:\Users\derek\Moviles\UPARK\uPark\UPark\UPark.Data\bin\Debug\net8.0\UPark.Data.pdb
+C:\Users\derek\Moviles\UPARK\uPark\UPark\UPark.Data\obj\Debug\net8.0\UPark.Data.csproj.AssemblyReference.cache
+C:\Users\derek\Moviles\UPARK\uPark\UPark\UPark.Data\obj\Debug\net8.0\UPark.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\derek\Moviles\UPARK\uPark\UPark\UPark.Data\obj\Debug\net8.0\UPark.Data.AssemblyInfoInputs.cache
+C:\Users\derek\Moviles\UPARK\uPark\UPark\UPark.Data\obj\Debug\net8.0\UPark.Data.AssemblyInfo.cs
+C:\Users\derek\Moviles\UPARK\uPark\UPark\UPark.Data\obj\Debug\net8.0\UPark.Data.csproj.CoreCompileInputs.cache
+C:\Users\derek\Moviles\UPARK\uPark\UPark\UPark.Data\obj\Debug\net8.0\UPark.Data.sourcelink.json
+C:\Users\derek\Moviles\UPARK\uPark\UPark\UPark.Data\obj\Debug\net8.0\UPark.Data.dll
+C:\Users\derek\Moviles\UPARK\uPark\UPark\UPark.Data\obj\Debug\net8.0\refint\UPark.Data.dll
+C:\Users\derek\Moviles\UPARK\uPark\UPark\UPark.Data\obj\Debug\net8.0\UPark.Data.pdb
+C:\Users\derek\Moviles\UPARK\uPark\UPark\UPark.Data\obj\Debug\net8.0\UPark.Data.genruntimeconfig.cache
+C:\Users\derek\Moviles\UPARK\uPark\UPark\UPark.Data\obj\Debug\net8.0\ref\UPark.Data.dll

@@ -1,0 +1,17 @@
+# Visual Studio
+.vs/
+*.vsidx
+*.db-shm
+*.db-wal
+*.user
+
+# Base de datos
+upark.db
+
+# Build results
+bin/
+obj/
+
+# NuGet
+packages/
+*.nupkg
