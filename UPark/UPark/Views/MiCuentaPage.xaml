@@ -14,32 +14,35 @@
 
             <!-- Foto de perfil -->
             <VerticalStackLayout HorizontalOptions="Center" Spacing="8">
-                <Frame BackgroundColor="#1565c0" CornerRadius="50"
-                       WidthRequest="100" HeightRequest="100" Padding="0"
-                       HorizontalOptions="Center">
+                <Border BackgroundColor="#1565c0" StrokeShape="RoundRectangle 50"
+                        WidthRequest="100" HeightRequest="100"
+                        HorizontalOptions="Center">
                     <Label Text="👤" FontSize="50"
                            HorizontalOptions="Center" VerticalOptions="Center"/>
-                </Frame>
-                <Label Text="Carlos López" FontSize="22" FontAttributes="Bold"
-                       TextColor="#1a237e" HorizontalOptions="Center"/>
-                <Label Text="20109633" FontSize="15" TextColor="Gray"
-                       HorizontalOptions="Center"/>
-                <Label Text="Estudiante" FontSize="14" TextColor="Gray"
-                       HorizontalOptions="Center"/>
+                </Border>
+                <Label x:Name="NombreLabel" Text="Carlos López" FontSize="22"
+                       FontAttributes="Bold" TextColor="#1a237e" HorizontalOptions="Center"/>
+                <Label x:Name="MatriculaLabel" Text="20109633" FontSize="15"
+                       TextColor="#333333" HorizontalOptions="Center"/>
+                <Label Text="Estudiante" FontSize="14"
+                       TextColor="#333333" HorizontalOptions="Center"/>
             </VerticalStackLayout>
 
             <!-- Opciones de cuenta -->
-            <Frame BackgroundColor="White" CornerRadius="15" Padding="5" HasShadow="True">
+            <Border BackgroundColor="White" StrokeShape="RoundRectangle 15" Padding="5">
                 <VerticalStackLayout Spacing="0">
 
                     <!-- Estacionamiento favorito -->
                     <Grid Padding="15">
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnEstacionamientoFavoritoTapped"/>
+                        </Grid.GestureRecognizers>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
                         <Label Grid.Column="0" Text="Estacionamiento Favorito"
-                               FontSize="15" VerticalOptions="Center"/>
+                               FontSize="15" TextColor="Black" VerticalOptions="Center"/>
                         <HorizontalStackLayout Grid.Column="1" Spacing="5">
                             <Label Text="IMM Parking" TextColor="Gray" FontSize="14"
                                    VerticalOptions="Center"/>
@@ -52,12 +55,15 @@
 
                     <!-- Preferencias notificación -->
                     <Grid Padding="15">
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnNotificacionesTapped"/>
+                        </Grid.GestureRecognizers>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
                         <Label Grid.Column="0" Text="Preferencias de Notificación"
-                               FontSize="15" VerticalOptions="Center"/>
+                               FontSize="15" TextColor="Black" VerticalOptions="Center"/>
                         <HorizontalStackLayout Grid.Column="1" Spacing="5">
                             <Label Text="Mis Alertas" TextColor="Gray" FontSize="14"
                                    VerticalOptions="Center"/>
@@ -70,18 +76,21 @@
 
                     <!-- Cambiar contraseña -->
                     <Grid Padding="15">
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnCambiarContrasenaTapped"/>
+                        </Grid.GestureRecognizers>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
                         <Label Grid.Column="0" Text="Cambiar Contraseña"
-                               FontSize="15" VerticalOptions="Center"/>
+                               FontSize="15" TextColor="Black" VerticalOptions="Center"/>
                         <Label Grid.Column="1" Text="›" FontSize="20" TextColor="Gray"
                                VerticalOptions="Center"/>
                     </Grid>
 
                 </VerticalStackLayout>
-            </Frame>
+            </Border>
 
             <!-- Botón Cerrar Sesión -->
             <Button Text="✓  Cerrar Sesión"

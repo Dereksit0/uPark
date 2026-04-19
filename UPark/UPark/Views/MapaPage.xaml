@@ -21,42 +21,140 @@
                         <Label Text="Entrada" HorizontalOptions="Center"
                                FontSize="14" TextColor="Gray"/>
 
+                        <!-- Fila 1 -->
                         <FlexLayout Wrap="Wrap" JustifyContent="Center">
-                            <Border BackgroundColor="#4caf50" WidthRequest="30" HeightRequest="30"
-                                    StrokeShape="RoundRectangle 5" Margin="2"/>
-                            <Border BackgroundColor="#4caf50" WidthRequest="30" HeightRequest="30"
-                                    StrokeShape="RoundRectangle 5" Margin="2"/>
-                            <Border BackgroundColor="#f44336" WidthRequest="30" HeightRequest="30"
-                                    StrokeShape="RoundRectangle 5" Margin="2"/>
-                            <Border BackgroundColor="#f44336" WidthRequest="30" HeightRequest="30"
-                                    StrokeShape="RoundRectangle 5" Margin="2"/>
-                            <Border BackgroundColor="#f44336" WidthRequest="30" HeightRequest="30"
-                                    StrokeShape="RoundRectangle 5" Margin="2"/>
-                            <Border BackgroundColor="#4caf50" WidthRequest="30" HeightRequest="30"
-                                    StrokeShape="RoundRectangle 5" Margin="2"/>
-                            <Border BackgroundColor="#f44336" WidthRequest="30" HeightRequest="30"
-                                    StrokeShape="RoundRectangle 5" Margin="2"/>
-                            <Border BackgroundColor="#4caf50" WidthRequest="30" HeightRequest="30"
-                                    StrokeShape="RoundRectangle 5" Margin="2"/>
+                            <Border BackgroundColor="#4caf50" WidthRequest="35" HeightRequest="35"
+                                    StrokeShape="RoundRectangle 5" Margin="2">
+                                <Label Text="5" TextColor="White" FontAttributes="Bold"
+                                       HorizontalOptions="Center" VerticalOptions="Center" FontSize="11"/>
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnEspacioTapped" CommandParameter="5,Libre"/>
+                                </Border.GestureRecognizers>
+                            </Border>
+                            <Border BackgroundColor="#4caf50" WidthRequest="35" HeightRequest="35"
+                                    StrokeShape="RoundRectangle 5" Margin="2">
+                                <Label Text="6" TextColor="White" FontAttributes="Bold"
+                                       HorizontalOptions="Center" VerticalOptions="Center" FontSize="11"/>
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnEspacioTapped" CommandParameter="6,Libre"/>
+                                </Border.GestureRecognizers>
+                            </Border>
+                            <Border BackgroundColor="#f44336" WidthRequest="35" HeightRequest="35"
+                                    StrokeShape="RoundRectangle 5" Margin="2">
+                                <Label Text="7" TextColor="White" FontAttributes="Bold"
+                                       HorizontalOptions="Center" VerticalOptions="Center" FontSize="11"/>
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnEspacioTapped" CommandParameter="7,Ocupado"/>
+                                </Border.GestureRecognizers>
+                            </Border>
+                            <Border BackgroundColor="#f44336" WidthRequest="35" HeightRequest="35"
+                                    StrokeShape="RoundRectangle 5" Margin="2">
+                                <Label Text="8" TextColor="White" FontAttributes="Bold"
+                                       HorizontalOptions="Center" VerticalOptions="Center" FontSize="11"/>
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnEspacioTapped" CommandParameter="8,Ocupado"/>
+                                </Border.GestureRecognizers>
+                            </Border>
+                            <Border BackgroundColor="#f44336" WidthRequest="35" HeightRequest="35"
+                                    StrokeShape="RoundRectangle 5" Margin="2">
+                                <Label Text="9" TextColor="White" FontAttributes="Bold"
+                                       HorizontalOptions="Center" VerticalOptions="Center" FontSize="11"/>
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnEspacioTapped" CommandParameter="9,Ocupado"/>
+                                </Border.GestureRecognizers>
+                            </Border>
+                            <Border BackgroundColor="#4caf50" WidthRequest="35" HeightRequest="35"
+                                    StrokeShape="RoundRectangle 5" Margin="2">
+                                <Label Text="10" TextColor="White" FontAttributes="Bold"
+                                       HorizontalOptions="Center" VerticalOptions="Center" FontSize="10"/>
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnEspacioTapped" CommandParameter="10,Libre"/>
+                                </Border.GestureRecognizers>
+                            </Border>
+                            <Border BackgroundColor="#f44336" WidthRequest="35" HeightRequest="35"
+                                    StrokeShape="RoundRectangle 5" Margin="2">
+                                <Label Text="11" TextColor="White" FontAttributes="Bold"
+                                       HorizontalOptions="Center" VerticalOptions="Center" FontSize="10"/>
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnEspacioTapped" CommandParameter="11,Ocupado"/>
+                                </Border.GestureRecognizers>
+                            </Border>
+                            <Border BackgroundColor="#4caf50" WidthRequest="35" HeightRequest="35"
+                                    StrokeShape="RoundRectangle 5" Margin="2">
+                                <Label Text="12" TextColor="White" FontAttributes="Bold"
+                                       HorizontalOptions="Center" VerticalOptions="Center" FontSize="10"/>
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnEspacioTapped" CommandParameter="12,Libre"/>
+                                </Border.GestureRecognizers>
+                            </Border>
                         </FlexLayout>
 
+                        <!-- Fila 2 -->
                         <FlexLayout Wrap="Wrap" JustifyContent="Center">
-                            <Border BackgroundColor="#f44336" WidthRequest="30" HeightRequest="30"
-                                    StrokeShape="RoundRectangle 5" Margin="2"/>
-                            <Border BackgroundColor="#f44336" WidthRequest="30" HeightRequest="30"
-                                    StrokeShape="RoundRectangle 5" Margin="2"/>
-                            <Border BackgroundColor="#4caf50" WidthRequest="30" HeightRequest="30"
-                                    StrokeShape="RoundRectangle 5" Margin="2"/>
-                            <Border BackgroundColor="#f44336" WidthRequest="30" HeightRequest="30"
-                                    StrokeShape="RoundRectangle 5" Margin="2"/>
-                            <Border BackgroundColor="#4caf50" WidthRequest="30" HeightRequest="30"
-                                    StrokeShape="RoundRectangle 5" Margin="2"/>
-                            <Border BackgroundColor="#f44336" WidthRequest="30" HeightRequest="30"
-                                    StrokeShape="RoundRectangle 5" Margin="2"/>
-                            <Border BackgroundColor="#f44336" WidthRequest="30" HeightRequest="30"
-                                    StrokeShape="RoundRectangle 5" Margin="2"/>
-                            <Border BackgroundColor="#4caf50" WidthRequest="30" HeightRequest="30"
-                                    StrokeShape="RoundRectangle 5" Margin="2"/>
+                            <Border BackgroundColor="#f44336" WidthRequest="35" HeightRequest="35"
+                                    StrokeShape="RoundRectangle 5" Margin="2">
+                                <Label Text="13" TextColor="White" FontAttributes="Bold"
+                                       HorizontalOptions="Center" VerticalOptions="Center" FontSize="10"/>
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnEspacioTapped" CommandParameter="13,Ocupado"/>
+                                </Border.GestureRecognizers>
+                            </Border>
+                            <Border BackgroundColor="#f44336" WidthRequest="35" HeightRequest="35"
+                                    StrokeShape="RoundRectangle 5" Margin="2">
+                                <Label Text="14" TextColor="White" FontAttributes="Bold"
+                                       HorizontalOptions="Center" VerticalOptions="Center" FontSize="10"/>
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnEspacioTapped" CommandParameter="14,Ocupado"/>
+                                </Border.GestureRecognizers>
+                            </Border>
+                            <Border BackgroundColor="#4caf50" WidthRequest="35" HeightRequest="35"
+                                    StrokeShape="RoundRectangle 5" Margin="2">
+                                <Label Text="15" TextColor="White" FontAttributes="Bold"
+                                       HorizontalOptions="Center" VerticalOptions="Center" FontSize="10"/>
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnEspacioTapped" CommandParameter="15,Libre"/>
+                                </Border.GestureRecognizers>
+                            </Border>
+                            <Border BackgroundColor="#f44336" WidthRequest="35" HeightRequest="35"
+                                    StrokeShape="RoundRectangle 5" Margin="2">
+                                <Label Text="16" TextColor="White" FontAttributes="Bold"
+                                       HorizontalOptions="Center" VerticalOptions="Center" FontSize="10"/>
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnEspacioTapped" CommandParameter="16,Ocupado"/>
+                                </Border.GestureRecognizers>
+                            </Border>
+                            <Border BackgroundColor="#4caf50" WidthRequest="35" HeightRequest="35"
+                                    StrokeShape="RoundRectangle 5" Margin="2">
+                                <Label Text="17" TextColor="White" FontAttributes="Bold"
+                                       HorizontalOptions="Center" VerticalOptions="Center" FontSize="10"/>
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnEspacioTapped" CommandParameter="17,Libre"/>
+                                </Border.GestureRecognizers>
+                            </Border>
+                            <Border BackgroundColor="#f44336" WidthRequest="35" HeightRequest="35"
+                                    StrokeShape="RoundRectangle 5" Margin="2">
+                                <Label Text="18" TextColor="White" FontAttributes="Bold"
+                                       HorizontalOptions="Center" VerticalOptions="Center" FontSize="10"/>
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnEspacioTapped" CommandParameter="18,Ocupado"/>
+                                </Border.GestureRecognizers>
+                            </Border>
+                            <Border BackgroundColor="#f44336" WidthRequest="35" HeightRequest="35"
+                                    StrokeShape="RoundRectangle 5" Margin="2">
+                                <Label Text="19" TextColor="White" FontAttributes="Bold"
+                                       HorizontalOptions="Center" VerticalOptions="Center" FontSize="10"/>
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnEspacioTapped" CommandParameter="19,Ocupado"/>
+                                </Border.GestureRecognizers>
+                            </Border>
+                            <Border BackgroundColor="#4caf50" WidthRequest="35" HeightRequest="35"
+                                    StrokeShape="RoundRectangle 5" Margin="2">
+                                <Label Text="20" TextColor="White" FontAttributes="Bold"
+                                       HorizontalOptions="Center" VerticalOptions="Center" FontSize="10"/>
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnEspacioTapped" CommandParameter="20,Libre"/>
+                                </Border.GestureRecognizers>
+                            </Border>
                         </FlexLayout>
 
                         <!-- Leyenda -->
@@ -64,12 +162,12 @@
                             <HorizontalStackLayout Spacing="5">
                                 <Border BackgroundColor="#4caf50" WidthRequest="20" HeightRequest="20"
                                         StrokeShape="RoundRectangle 3"/>
-                                <Label Text="Libre" VerticalOptions="Center"/>
+                                <Label Text="Libre" VerticalOptions="Center" TextColor="#333333"/>
                             </HorizontalStackLayout>
                             <HorizontalStackLayout Spacing="5">
                                 <Border BackgroundColor="#f44336" WidthRequest="20" HeightRequest="20"
                                         StrokeShape="RoundRectangle 3"/>
-                                <Label Text="Ocupado" VerticalOptions="Center"/>
+                                <Label Text="Ocupado" VerticalOptions="Center" TextColor="#333333"/>
                             </HorizontalStackLayout>
                         </HorizontalStackLayout>
 
@@ -89,7 +187,8 @@
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
-                            <Label Grid.Column="0" Text="Espacio 5" FontAttributes="Bold" FontSize="15"/>
+                            <Label Grid.Column="0" Text="Espacio 5" FontAttributes="Bold"
+                                   FontSize="15" TextColor="#333333"/>
                             <Label Grid.Column="1" Text="Libre" TextColor="#4caf50" FontAttributes="Bold"/>
                         </Grid>
                         <BoxView HeightRequest="1" BackgroundColor="#eeeeee"/>
@@ -98,7 +197,8 @@
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
-                            <Label Grid.Column="0" Text="Espacio 8" FontAttributes="Bold" FontSize="15"/>
+                            <Label Grid.Column="0" Text="Espacio 8" FontAttributes="Bold"
+                                   FontSize="15" TextColor="#333333"/>
                             <Label Grid.Column="1" Text="Ocupado" TextColor="#f44336" FontAttributes="Bold"/>
                         </Grid>
                         <BoxView HeightRequest="1" BackgroundColor="#eeeeee"/>
@@ -107,16 +207,8 @@
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
-                            <Label Grid.Column="0" Text="Espacio 12" FontAttributes="Bold" FontSize="15"/>
-                            <Label Grid.Column="1" Text="Ocupado" TextColor="#f44336" FontAttributes="Bold"/>
-                        </Grid>
-                        <BoxView HeightRequest="1" BackgroundColor="#eeeeee"/>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
-                            <Label Grid.Column="0" Text="Espacio 15" FontAttributes="Bold" FontSize="15"/>
+                            <Label Grid.Column="0" Text="Espacio 12" FontAttributes="Bold"
+                                   FontSize="15" TextColor="#333333"/>
                             <Label Grid.Column="1" Text="Libre" TextColor="#4caf50" FontAttributes="Bold"/>
                         </Grid>
                         <BoxView HeightRequest="1" BackgroundColor="#eeeeee"/>
@@ -125,7 +217,18 @@
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
-                            <Label Grid.Column="0" Text="Espacio 20" FontAttributes="Bold" FontSize="15"/>
+                            <Label Grid.Column="0" Text="Espacio 15" FontAttributes="Bold"
+                                   FontSize="15" TextColor="#333333"/>
+                            <Label Grid.Column="1" Text="Libre" TextColor="#4caf50" FontAttributes="Bold"/>
+                        </Grid>
+                        <BoxView HeightRequest="1" BackgroundColor="#eeeeee"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text="Espacio 20" FontAttributes="Bold"
+                                   FontSize="15" TextColor="#333333"/>
                             <Label Grid.Column="1" Text="Ocupado" TextColor="#f44336" FontAttributes="Bold"/>
                         </Grid>
                     </VerticalStackLayout>

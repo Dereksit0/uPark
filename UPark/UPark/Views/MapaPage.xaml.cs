@@ -20,6 +20,17 @@ public partial class MapaPage : ContentPage
         InitializeComponent();
     }
 
+    private async void OnEspacioTapped(object sender, TappedEventArgs e)
+    {
+        if (e.Parameter is string param)
+        {
+            var parts = param.Split(',');
+            string numero = parts[0];
+            string estado = parts[1];
+            await Shell.Current.GoToAsync($"DetalleEspacioPage?numero={numero}&estado={estado}");
+        }
+    }
+
     private async void OnRefreshing(object sender, EventArgs e)
     {
         await Task.Delay(1500);

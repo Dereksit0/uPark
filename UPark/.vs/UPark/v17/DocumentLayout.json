@@ -1,28 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\derek\\Moviles\\UPARK\\uPark\\UPark\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{9D4BE4FA-4319-4DA5-A3DD-FE5428388B96}|UPark\\UPark.csproj|c:\\users\\derek\\moviles\\upark\\upark\\upark\\upark\\views\\mapapage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D4BE4FA-4319-4DA5-A3DD-FE5428388B96}|UPark\\UPark.csproj|solutionrelative:upark\\views\\mapapage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D4BE4FA-4319-4DA5-A3DD-FE5428388B96}|UPark\\UPark.csproj|c:\\users\\derek\\moviles\\upark\\upark\\upark\\upark\\views\\mapapage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{9D4BE4FA-4319-4DA5-A3DD-FE5428388B96}|UPark\\UPark.csproj|solutionrelative:upark\\views\\mapapage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D4BE4FA-4319-4DA5-A3DD-FE5428388B96}|UPark\\UPark.csproj|c:\\users\\derek\\moviles\\upark\\upark\\upark\\upark\\views\\notificacionespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D4BE4FA-4319-4DA5-A3DD-FE5428388B96}|UPark\\UPark.csproj|solutionrelative:upark\\views\\notificacionespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D4BE4FA-4319-4DA5-A3DD-FE5428388B96}|UPark\\UPark.csproj|c:\\users\\derek\\moviles\\upark\\upark\\upark\\upark\\views\\notificacionespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{9D4BE4FA-4319-4DA5-A3DD-FE5428388B96}|UPark\\UPark.csproj|solutionrelative:upark\\views\\notificacionespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D4BE4FA-4319-4DA5-A3DD-FE5428388B96}|UPark\\UPark.csproj|c:\\users\\derek\\moviles\\upark\\upark\\upark\\upark\\views\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{9D4BE4FA-4319-4DA5-A3DD-FE5428388B96}|UPark\\UPark.csproj|solutionrelative:upark\\views\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -30,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -43,71 +22,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MapaPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\derek\\Moviles\\UPARK\\uPark\\UPark\\UPark\\Views\\MapaPage.xaml.cs",
-              "RelativeDocumentMoniker": "UPark\\Views\\MapaPage.xaml.cs",
-              "ToolTip": "C:\\Users\\derek\\Moviles\\UPARK\\uPark\\UPark\\UPark\\Views\\MapaPage.xaml.cs",
-              "RelativeToolTip": "UPark\\Views\\MapaPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T22:33:33.567Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MapaPage.xaml",
-              "DocumentMoniker": "C:\\Users\\derek\\Moviles\\UPARK\\uPark\\UPark\\UPark\\Views\\MapaPage.xaml",
-              "RelativeDocumentMoniker": "UPark\\Views\\MapaPage.xaml",
-              "ToolTip": "C:\\Users\\derek\\Moviles\\UPARK\\uPark\\UPark\\UPark\\Views\\MapaPage.xaml",
-              "RelativeToolTip": "UPark\\Views\\MapaPage.xaml",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAYwIMAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-18T22:32:39.178Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "NotificacionesPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\derek\\Moviles\\UPARK\\uPark\\UPark\\UPark\\Views\\NotificacionesPage.xaml.cs",
-              "RelativeDocumentMoniker": "UPark\\Views\\NotificacionesPage.xaml.cs",
-              "ToolTip": "C:\\Users\\derek\\Moviles\\UPARK\\uPark\\UPark\\UPark\\Views\\NotificacionesPage.xaml.cs",
-              "RelativeToolTip": "UPark\\Views\\NotificacionesPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T22:32:10.136Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "NotificacionesPage.xaml",
-              "DocumentMoniker": "C:\\Users\\derek\\Moviles\\UPARK\\uPark\\UPark\\UPark\\Views\\NotificacionesPage.xaml",
-              "RelativeDocumentMoniker": "UPark\\Views\\NotificacionesPage.xaml",
-              "ToolTip": "C:\\Users\\derek\\Moviles\\UPARK\\uPark\\UPark\\UPark\\Views\\NotificacionesPage.xaml",
-              "RelativeToolTip": "UPark\\Views\\NotificacionesPage.xaml",
-              "ViewState": "AgIAAFkAAAAAAAAAAAAYwGwAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-18T22:30:14.099Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "HomePage.xaml",
-              "DocumentMoniker": "C:\\Users\\derek\\Moviles\\UPARK\\uPark\\UPark\\UPark\\Views\\HomePage.xaml",
-              "RelativeDocumentMoniker": "UPark\\Views\\HomePage.xaml",
-              "ToolTip": "C:\\Users\\derek\\Moviles\\UPARK\\uPark\\UPark\\UPark\\Views\\HomePage.xaml",
-              "RelativeToolTip": "UPark\\Views\\HomePage.xaml",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAYwE4AAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-18T22:22:29.259Z",
-              "EditorCaption": ""
             }
           ]
         },

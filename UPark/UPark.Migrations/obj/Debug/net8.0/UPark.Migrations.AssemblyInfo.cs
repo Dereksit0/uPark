@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UPark.Migrations")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2f51a877469065cadc9132957a8783711bf782d4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+51d39936b4c31f4999ed7d4eac967cbfc1a7967c")]
 [assembly: System.Reflection.AssemblyProductAttribute("UPark.Migrations")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UPark.Migrations")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
