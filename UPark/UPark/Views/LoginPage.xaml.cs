@@ -1,12 +1,16 @@
-﻿namespace UPark.Views;
+using UPark.Services;
+
+namespace UPark.Views;
 
 public partial class LoginPage : ContentPage
 {
+    private readonly IUsuarioService _usuarioService;
     private bool _contrasenaVisible = false;
 
-    public LoginPage()
+    public LoginPage(IUsuarioService usuarioService)
     {
         InitializeComponent();
+        _usuarioService = usuarioService;
     }
 
     private void OnMatriculaTextChanged(object sender, TextChangedEventArgs e)
@@ -23,15 +27,17 @@ public partial class LoginPage : ContentPage
     {
         _contrasenaVisible = !_contrasenaVisible;
         ContrasenaEntry.IsPassword = !_contrasenaVisible;
-        OjitoLabel.Text = _contrasenaVisible ? "🙈" : "👁";
+        OjitoLabel.Text = _contrasenaVisible ? "OCULTAR" : "VER";
     }
 
     private async void OnLoginClicked(object sender, EventArgs e)
     {
         bool hasError = false;
+        LoginErrorPanel.IsVisible = false;
 
         if (string.IsNullOrWhiteSpace(MatriculaEntry.Text))
         {
+            MatriculaError.Text = "⚠ La matrícula no puede estar vacía";
             MatriculaError.IsVisible = true;
             hasError = true;
         }
@@ -44,12 +50,31 @@ public partial class LoginPage : ContentPage
         }
         else { ContrasenaError.IsVisible = false; }
 
-        if (!hasError)
+        if (hasError) return;
+
+        // Verificar si el usuario existe en la base de datos
+        bool existe = await _usuarioService.ExisteMatriculaAsync(MatriculaEntry.Text);
+        if (!existe)
         {
-            Preferences.Set("matricula", MatriculaEntry.Text);
-            Preferences.Set("nombre", "Carlos López");
-            await Shell.Current.GoToAsync("//HomePage");
+            MatriculaError.Text = "⚠ No existe ningún usuario con esa matrícula";
+            MatriculaError.IsVisible = true;
+            return;
         }
+
+        // Validar contraseña
+        var usuario = await _usuarioService.LoginAsync(MatriculaEntry.Text, ContrasenaEntry.Text);
+        if (usuario == null)
+        {
+            LoginErrorLabel.Text = "⚠ Contraseña incorrecta. Intenta de nuevo.";
+            LoginErrorPanel.IsVisible = true;
+            ContrasenaEntry.Text = string.Empty;
+            return;
+        }
+
+        // Login exitoso
+        Preferences.Set("matricula", usuario.Matricula);
+        Preferences.Set("nombre", usuario.Nombre);
+        await Shell.Current.GoToAsync("//HomePage");
     }
 
     private async void OnOlvidasteClicked(object sender, EventArgs e)

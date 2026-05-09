@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="UPark.Views.DetalleEspacioPage"
+             x:Class="UPark.Views.ReservaPage"
              BackgroundColor="#f5f5f5">
 
     <Shell.BackButtonBehavior>
@@ -22,10 +22,10 @@
                            TextColor="White" VerticalOptions="Center"/>
                 </HorizontalStackLayout>
                 <Border.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnVolverClicked"/>
+                    <TapGestureRecognizer Tapped="OnNavVolverClicked"/>
                 </Border.GestureRecognizers>
             </Border>
-            <Label Grid.Column="1" Text="Detalle del Espacio" FontSize="18"
+            <Label Grid.Column="1" Text="Reservar Espacio" FontSize="18"
                    FontAttributes="Bold" TextColor="White"
                    HorizontalOptions="Center" VerticalOptions="Center"/>
         </Grid>
@@ -38,102 +38,88 @@
             <ActivityIndicator x:Name="LoadingIndicator" IsVisible="True" IsRunning="True"
                                Color="#1565c0" HeightRequest="50"/>
 
-            <!-- Icono estado -->
+            <!-- Icono -->
             <Border x:Name="IconoPanel" IsVisible="False" BackgroundColor="White"
                     StrokeShape="RoundRectangle 15" Padding="20"
-                    HorizontalOptions="Center" WidthRequest="120" HeightRequest="120">
-                <Label x:Name="IconoLabel" Text="🟢" FontSize="60"
+                    HorizontalOptions="Center" WidthRequest="100" HeightRequest="100">
+                <Label Text="🅿" FontSize="55"
                        HorizontalOptions="Center" VerticalOptions="Center"/>
             </Border>
 
-            <!-- Detalle del espacio -->
+            <!-- Detalles del espacio -->
             <Border x:Name="DetallePanel" IsVisible="False" BackgroundColor="White"
                     StrokeShape="RoundRectangle 15" Padding="20">
-                <VerticalStackLayout Spacing="15">
+                <VerticalStackLayout Spacing="14">
+
+                    <Label Text="Detalle de la Reserva" FontSize="17" FontAttributes="Bold"
+                           TextColor="#1a237e"/>
+
+                    <BoxView HeightRequest="1" BackgroundColor="#eeeeee"/>
 
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0" Text="Estacionamiento:"
-                               FontSize="16" TextColor="Gray"/>
+                        <Label Grid.Column="0" Text="Estacionamiento:" TextColor="Gray" FontSize="15"/>
                         <Label x:Name="EstacionamientoLabel" Grid.Column="1"
-                               FontSize="16" FontAttributes="Bold" TextColor="#1a237e"/>
+                               FontAttributes="Bold" TextColor="#1a237e" FontSize="15"/>
                     </Grid>
-
-                    <BoxView HeightRequest="1" BackgroundColor="#eeeeee"/>
 
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0" Text="Número de Espacio:"
-                               FontSize="16" TextColor="Gray"/>
-                        <Label x:Name="NumeroLabel" Grid.Column="1" Text="0"
-                               FontSize="16" FontAttributes="Bold" TextColor="#1a237e"/>
+                        <Label Grid.Column="0" Text="Número de Espacio:" TextColor="Gray" FontSize="15"/>
+                        <Label x:Name="NumeroLabel" Grid.Column="1"
+                               FontAttributes="Bold" TextColor="#1a237e" FontSize="15"/>
                     </Grid>
-
-                    <BoxView HeightRequest="1" BackgroundColor="#eeeeee"/>
 
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0" Text="Estado:"
-                               FontSize="16" TextColor="Gray"/>
-                        <Label x:Name="EstadoLabel" Grid.Column="1" Text="Libre"
-                               FontSize="16" FontAttributes="Bold" TextColor="#4caf50"/>
-                    </Grid>
-
-                    <BoxView HeightRequest="1" BackgroundColor="#eeeeee"/>
-
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="Auto"/>
-                        </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0" Text="Última Actualización:"
-                               FontSize="16" TextColor="Gray"/>
-                        <Label x:Name="ActualizacionLabel" Grid.Column="1"
-                               Text="Ahora" FontSize="14" TextColor="Gray"/>
+                        <Label Grid.Column="0" Text="Estado:" TextColor="Gray" FontSize="15"/>
+                        <Label x:Name="EstadoLabel" Grid.Column="1"
+                               FontAttributes="Bold" TextColor="#4caf50" FontSize="15"/>
                     </Grid>
 
                 </VerticalStackLayout>
             </Border>
 
-            <!-- Botón Reservar (solo si está libre) -->
-            <Button x:Name="ReservarBtn" IsVisible="False"
-                    Text="Reservar este Espacio"
+            <!-- Error -->
+            <Border x:Name="ErrorPanel" IsVisible="False" BackgroundColor="#ffebee"
+                    StrokeShape="RoundRectangle 10" Padding="15">
+                <HorizontalStackLayout Spacing="8" HorizontalOptions="Center">
+                    <Label Text="⚠" FontSize="18" TextColor="#c62828"/>
+                    <Label x:Name="ErrorLabel" TextColor="#c62828" FontSize="14"
+                           VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+            </Border>
+
+            <!-- Botón Confirmar -->
+            <Button x:Name="ConfirmarBtn" IsVisible="False"
+                    Text="Confirmar Reserva"
                     BackgroundColor="#4caf50"
                     TextColor="White"
                     FontSize="16"
                     FontAttributes="Bold"
                     CornerRadius="10"
                     HeightRequest="50"
-                    Clicked="OnReservarClicked"/>
+                    Clicked="OnConfirmarClicked"/>
 
-            <!-- Aviso espacio ocupado -->
-            <Border x:Name="OcupadoPanel" IsVisible="False"
-                    BackgroundColor="#fff3e0" StrokeShape="RoundRectangle 10" Padding="15">
-                <HorizontalStackLayout Spacing="8" HorizontalOptions="Center">
-                    <Label Text="🚫" FontSize="20"/>
-                    <Label Text="Este espacio está ocupado actualmente."
-                           FontSize="14" TextColor="#e65100" VerticalOptions="Center"/>
-                </HorizontalStackLayout>
-            </Border>
-
-            <!-- Botón volver -->
-            <Button Text="← Volver al mapa"
-                    BackgroundColor="#1565c0"
-                    TextColor="White"
-                    FontSize="16"
-                    FontAttributes="Bold"
+            <!-- Botón Cancelar -->
+            <Button Text="Cancelar"
+                    BackgroundColor="Transparent"
+                    TextColor="#1565c0"
+                    FontSize="15"
                     CornerRadius="10"
-                    HeightRequest="50"
-                    Clicked="OnVolverClicked"/>
+                    HeightRequest="45"
+                    BorderColor="#1565c0"
+                    BorderWidth="1.5"
+                    Clicked="OnCancelarClicked"/>
 
         </VerticalStackLayout>
     </ScrollView>

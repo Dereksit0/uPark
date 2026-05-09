@@ -20,6 +20,9 @@ public partial class MapaPage : ContentPage
         InitializeComponent();
     }
 
+    private async void OnNavVolverClicked(object sender, EventArgs e)
+        => await Shell.Current.GoToAsync("..");
+
     private async void OnEspacioTapped(object sender, TappedEventArgs e)
     {
         if (e.Parameter is string param)
@@ -27,7 +30,8 @@ public partial class MapaPage : ContentPage
             var parts = param.Split(',');
             string numero = parts[0];
             string estado = parts[1];
-            await Shell.Current.GoToAsync($"DetalleEspacioPage?numero={numero}&estado={estado}");
+            string est = Uri.EscapeDataString(_estacionamiento);
+            await Shell.Current.GoToAsync($"DetalleEspacioPage?numero={numero}&estado={estado}&estacionamiento={est}");
         }
     }
 

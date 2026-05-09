@@ -5,7 +5,7 @@
              BackgroundColor="#f5f5f5">
 
     <Shell.TitleView>
-        <Label Text="Notificaciones" FontSize="20" FontAttributes="Bold"
+        <Label Text="Notificaciones" FontSize="18" FontAttributes="Bold"
                TextColor="White" VerticalOptions="Center" HorizontalOptions="Center"/>
     </Shell.TitleView>
 

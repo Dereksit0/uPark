@@ -4,71 +4,135 @@
              x:Class="UPark.Views.OlvidasteContrasenaPage"
              BackgroundColor="#1a237e">
 
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsEnabled="False"/>
+    </Shell.BackButtonBehavior>
     <Shell.TitleView>
-        <Label Text="Recuperar Contraseña" FontSize="20" FontAttributes="Bold"
-               TextColor="White" VerticalOptions="Center" HorizontalOptions="Center"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="44"/>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="0" BackgroundColor="#1565c0" StrokeShape="RoundRectangle 8"
+                    Stroke="Transparent" Padding="12,7" Margin="8,0,0,0">
+                <HorizontalStackLayout Spacing="4">
+                    <Label Text="←" FontSize="15" TextColor="White" VerticalOptions="Center"/>
+                    <Label Text="Volver" FontSize="13" FontAttributes="Bold"
+                           TextColor="White" VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnNavVolverClicked"/>
+                </Border.GestureRecognizers>
+            </Border>
+            <Label Grid.Column="1" Text="Recuperar Contraseña" FontSize="18"
+                   FontAttributes="Bold" TextColor="White"
+                   HorizontalOptions="Center" VerticalOptions="Center"/>
+        </Grid>
     </Shell.TitleView>
 
     <ScrollView>
-        <VerticalStackLayout Padding="30" Spacing="20" VerticalOptions="Center">
+        <VerticalStackLayout Padding="28" Spacing="18" VerticalOptions="Center">
 
-            <Label Text="uPark" FontSize="36" FontAttributes="Bold"
-                   TextColor="White" HorizontalOptions="Center"/>
+            <Image Source="logoupark.png" HeightRequest="60" WidthRequest="60"
+                   HorizontalOptions="Center"/>
+            <Label Text="uPark" FontSize="28" FontAttributes="Bold" TextColor="White"
+                   HorizontalOptions="Center" CharacterSpacing="2"/>
 
-            <Label Text="Ingresa tu correo institucional y te enviaremos instrucciones para recuperar tu contraseña."
-                   TextColor="#90caf9" FontSize="14"
-                   HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+            <!-- PASO 1: Verificar correo -->
+            <VerticalStackLayout x:Name="Paso1Panel" Spacing="14">
+                <Label Text="Ingresa tu correo institucional para verificar tu identidad."
+                       TextColor="#90caf9" FontSize="14"
+                       HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
 
-            <!-- Correo -->
-            <Border StrokeShape="RoundRectangle 10" BackgroundColor="White" Padding="5">
-                <Entry x:Name="CorreoEntry"
-                       Placeholder="Correo institucional"
-                       PlaceholderColor="Gray"
-                       TextColor="Black"
-                       Keyboard="Email"
-                       FontSize="16"
-                       Margin="10,0">
-                    <Entry.Triggers>
-                        <DataTrigger TargetType="Entry"
-                                     Binding="{Binding Source={x:Reference CorreoError}, Path=IsVisible}"
-                                     Value="True">
-                            <Setter Property="BackgroundColor" Value="#ffebee"/>
-                            <Setter Property="TextColor" Value="#c62828"/>
-                        </DataTrigger>
-                        <DataTrigger TargetType="Entry"
-                                     Binding="{Binding Source={x:Reference CorreoError}, Path=IsVisible}"
-                                     Value="False">
-                            <Setter Property="BackgroundColor" Value="White"/>
-                            <Setter Property="TextColor" Value="Black"/>
-                        </DataTrigger>
-                    </Entry.Triggers>
-                </Entry>
-            </Border>
+                <Border StrokeShape="RoundRectangle 10" BackgroundColor="White" Padding="5">
+                    <Entry x:Name="CorreoEntry"
+                           Placeholder="Correo institucional"
+                           PlaceholderColor="Gray" TextColor="Black"
+                           Keyboard="Email" FontSize="16" Margin="10,0">
+                        <Entry.Triggers>
+                            <DataTrigger TargetType="Entry"
+                                         Binding="{Binding Source={x:Reference CorreoError}, Path=IsVisible}"
+                                         Value="True">
+                                <Setter Property="BackgroundColor" Value="#ffebee"/>
+                                <Setter Property="TextColor" Value="#c62828"/>
+                            </DataTrigger>
+                            <DataTrigger TargetType="Entry"
+                                         Binding="{Binding Source={x:Reference CorreoError}, Path=IsVisible}"
+                                         Value="False">
+                                <Setter Property="BackgroundColor" Value="White"/>
+                                <Setter Property="TextColor" Value="Black"/>
+                            </DataTrigger>
+                        </Entry.Triggers>
+                    </Entry>
+                </Border>
+                <Label x:Name="CorreoError" IsVisible="False"
+                       TextColor="#ff5252" FontSize="12" Margin="5,0"/>
 
-            <Label x:Name="CorreoError"
-                   Text="⚠ El correo no puede estar vacío"
-                   TextColor="#ff5252" FontSize="12"
-                   IsVisible="False" Margin="5,0"/>
+                <Button x:Name="VerificarBtn" Text="Verificar correo"
+                        BackgroundColor="#1565c0" TextColor="White"
+                        FontSize="16" FontAttributes="Bold"
+                        CornerRadius="10" HeightRequest="50"
+                        Clicked="OnVerificarClicked"/>
+            </VerticalStackLayout>
 
-            <!-- Botón Enviar -->
-            <Button Text="Enviar instrucciones"
-                    BackgroundColor="#1565c0"
-                    TextColor="White"
-                    FontSize="16"
-                    FontAttributes="Bold"
-                    CornerRadius="10"
-                    HeightRequest="50"
-                    Clicked="OnEnviarClicked"/>
+            <!-- PASO 2: Nueva contraseña -->
+            <VerticalStackLayout x:Name="Paso2Panel" IsVisible="False" Spacing="14">
 
-            <!-- Volver -->
-            <Label Text="← Volver al inicio de sesión"
-                   TextColor="#90caf9"
-                   HorizontalOptions="Center"
-                   FontSize="14">
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnVolverClicked"/>
-                </Label.GestureRecognizers>
-            </Label>
+                <Border BackgroundColor="#e8f5e9" StrokeShape="RoundRectangle 10" Padding="14,10">
+                    <HorizontalStackLayout Spacing="8" HorizontalOptions="Center">
+                        <Label Text="✓" TextColor="#2e7d32" FontSize="18" FontAttributes="Bold" VerticalOptions="Center"/>
+                        <Label x:Name="CorreoConfirmadoLabel" TextColor="#2e7d32"
+                               FontSize="13" VerticalOptions="Center"/>
+                    </HorizontalStackLayout>
+                </Border>
+
+                <Label Text="Crea una nueva contraseña para tu cuenta."
+                       TextColor="#90caf9" FontSize="14"
+                       HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+
+                <!-- Nueva contraseña -->
+                <Border StrokeShape="RoundRectangle 10" BackgroundColor="White" Padding="5">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Entry x:Name="NuevaContrasenaEntry" Grid.Column="0"
+                               Placeholder="Nueva contraseña"
+                               PlaceholderColor="Gray" TextColor="Black"
+                               IsPassword="True" FontSize="16" Margin="10,0"/>
+                        <Border Grid.Column="1" BackgroundColor="#e8eaf6"
+                                StrokeShape="RoundRectangle 6" Stroke="Transparent"
+                                Margin="0,6,8,6" Padding="10,0">
+                            <Label x:Name="ToggleNuevaLabel" Text="VER"
+                                   TextColor="#1565c0" FontSize="11" FontAttributes="Bold"
+                                   VerticalOptions="Center" WidthRequest="55"
+                                   HorizontalTextAlignment="Center">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnToggleNueva"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </Border>
+                    </Grid>
+                </Border>
+
+                <!-- Confirmar contraseña -->
+                <Border StrokeShape="RoundRectangle 10" BackgroundColor="White" Padding="5">
+                    <Entry x:Name="ConfirmarContrasenaEntry"
+                           Placeholder="Confirmar nueva contraseña"
+                           PlaceholderColor="Gray" TextColor="Black"
+                           IsPassword="True" FontSize="16" Margin="10,0"/>
+                </Border>
+                <Label x:Name="NuevaError" IsVisible="False"
+                       TextColor="#ff5252" FontSize="12" Margin="5,0"/>
+
+                <Button Text="Cambiar contraseña"
+                        BackgroundColor="#4caf50" TextColor="White"
+                        FontSize="16" FontAttributes="Bold"
+                        CornerRadius="10" HeightRequest="50"
+                        Clicked="OnCambiarClicked"/>
+            </VerticalStackLayout>
 
         </VerticalStackLayout>
     </ScrollView>

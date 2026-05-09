@@ -4,9 +4,31 @@
              x:Class="UPark.Views.RegistroPage"
              BackgroundColor="#1a237e">
 
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsEnabled="False"/>
+    </Shell.BackButtonBehavior>
     <Shell.TitleView>
-        <Label Text="Crear Cuenta" FontSize="20" FontAttributes="Bold"
-               TextColor="White" VerticalOptions="Center" HorizontalOptions="Center"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="44"/>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="0" BackgroundColor="#1565c0" StrokeShape="RoundRectangle 8"
+                    Stroke="Transparent" Padding="12,7" Margin="8,0,0,0">
+                <HorizontalStackLayout Spacing="4">
+                    <Label Text="←" FontSize="15" TextColor="White" VerticalOptions="Center"/>
+                    <Label Text="Volver" FontSize="13" FontAttributes="Bold"
+                           TextColor="White" VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnNavVolverClicked"/>
+                </Border.GestureRecognizers>
+            </Border>
+            <Label Grid.Column="1" Text="Crear Cuenta" FontSize="18"
+                   FontAttributes="Bold" TextColor="White"
+                   HorizontalOptions="Center" VerticalOptions="Center"/>
+        </Grid>
     </Shell.TitleView>
 
     <ScrollView>
@@ -107,28 +129,43 @@
 
             <!-- Contraseña -->
             <Border StrokeShape="RoundRectangle 10" BackgroundColor="White" Padding="5">
-                <Entry x:Name="ContrasenaEntry"
-                       Placeholder="Contraseña"
-                       PlaceholderColor="Gray"
-                       TextColor="Black"
-                       IsPassword="True"
-                       FontSize="16"
-                       Margin="10,0">
-                    <Entry.Triggers>
-                        <DataTrigger TargetType="Entry"
-                                     Binding="{Binding Source={x:Reference ContrasenaError}, Path=IsVisible}"
-                                     Value="True">
-                            <Setter Property="BackgroundColor" Value="#ffebee"/>
-                            <Setter Property="TextColor" Value="#c62828"/>
-                        </DataTrigger>
-                        <DataTrigger TargetType="Entry"
-                                     Binding="{Binding Source={x:Reference ContrasenaError}, Path=IsVisible}"
-                                     Value="False">
-                            <Setter Property="BackgroundColor" Value="White"/>
-                            <Setter Property="TextColor" Value="Black"/>
-                        </DataTrigger>
-                    </Entry.Triggers>
-                </Entry>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Entry x:Name="ContrasenaEntry" Grid.Column="0"
+                           Placeholder="Contraseña"
+                           PlaceholderColor="Gray" TextColor="Black"
+                           IsPassword="True" FontSize="16" Margin="10,0">
+                        <Entry.Triggers>
+                            <DataTrigger TargetType="Entry"
+                                         Binding="{Binding Source={x:Reference ContrasenaError}, Path=IsVisible}"
+                                         Value="True">
+                                <Setter Property="BackgroundColor" Value="#ffebee"/>
+                                <Setter Property="TextColor" Value="#c62828"/>
+                            </DataTrigger>
+                            <DataTrigger TargetType="Entry"
+                                         Binding="{Binding Source={x:Reference ContrasenaError}, Path=IsVisible}"
+                                         Value="False">
+                                <Setter Property="BackgroundColor" Value="White"/>
+                                <Setter Property="TextColor" Value="Black"/>
+                            </DataTrigger>
+                        </Entry.Triggers>
+                    </Entry>
+                    <Border Grid.Column="1" BackgroundColor="#e8eaf6"
+                            StrokeShape="RoundRectangle 6" Stroke="Transparent"
+                            Margin="0,6,8,6" Padding="10,0">
+                        <Label x:Name="ToggleContrasenaLabel" Text="VER"
+                               TextColor="#1565c0" FontSize="11" FontAttributes="Bold"
+                               VerticalOptions="Center" WidthRequest="55"
+                               HorizontalTextAlignment="Center">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnToggleContrasena"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </Border>
+                </Grid>
             </Border>
             <Label x:Name="ContrasenaError"
                    Text="⚠ La contraseña no puede estar vacía"
@@ -137,33 +174,55 @@
 
             <!-- Confirmar Contraseña -->
             <Border StrokeShape="RoundRectangle 10" BackgroundColor="White" Padding="5">
-                <Entry x:Name="ConfirmarContrasenaEntry"
-                       Placeholder="Confirmar contraseña"
-                       PlaceholderColor="Gray"
-                       TextColor="Black"
-                       IsPassword="True"
-                       FontSize="16"
-                       Margin="10,0">
-                    <Entry.Triggers>
-                        <DataTrigger TargetType="Entry"
-                                     Binding="{Binding Source={x:Reference ConfirmarError}, Path=IsVisible}"
-                                     Value="True">
-                            <Setter Property="BackgroundColor" Value="#ffebee"/>
-                            <Setter Property="TextColor" Value="#c62828"/>
-                        </DataTrigger>
-                        <DataTrigger TargetType="Entry"
-                                     Binding="{Binding Source={x:Reference ConfirmarError}, Path=IsVisible}"
-                                     Value="False">
-                            <Setter Property="BackgroundColor" Value="White"/>
-                            <Setter Property="TextColor" Value="Black"/>
-                        </DataTrigger>
-                    </Entry.Triggers>
-                </Entry>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Entry x:Name="ConfirmarContrasenaEntry" Grid.Column="0"
+                           Placeholder="Confirmar contraseña"
+                           PlaceholderColor="Gray" TextColor="Black"
+                           IsPassword="True" FontSize="16" Margin="10,0">
+                        <Entry.Triggers>
+                            <DataTrigger TargetType="Entry"
+                                         Binding="{Binding Source={x:Reference ConfirmarError}, Path=IsVisible}"
+                                         Value="True">
+                                <Setter Property="BackgroundColor" Value="#ffebee"/>
+                                <Setter Property="TextColor" Value="#c62828"/>
+                            </DataTrigger>
+                            <DataTrigger TargetType="Entry"
+                                         Binding="{Binding Source={x:Reference ConfirmarError}, Path=IsVisible}"
+                                         Value="False">
+                                <Setter Property="BackgroundColor" Value="White"/>
+                                <Setter Property="TextColor" Value="Black"/>
+                            </DataTrigger>
+                        </Entry.Triggers>
+                    </Entry>
+                    <Border Grid.Column="1" BackgroundColor="#e8eaf6"
+                            StrokeShape="RoundRectangle 6" Stroke="Transparent"
+                            Margin="0,6,8,6" Padding="10,0">
+                        <Label x:Name="ToggleConfirmarLabel" Text="VER"
+                               TextColor="#1565c0" FontSize="11" FontAttributes="Bold"
+                               VerticalOptions="Center" WidthRequest="55"
+                               HorizontalTextAlignment="Center">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnToggleConfirmar"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </Border>
+                </Grid>
             </Border>
             <Label x:Name="ConfirmarError"
                    Text="⚠ Las contraseñas no coinciden"
                    TextColor="#ff5252" FontSize="12"
                    IsVisible="False" Margin="5,0"/>
+
+            <!-- Error general de registro -->
+            <Border x:Name="RegistroErrorPanel" IsVisible="False"
+                    BackgroundColor="#ffebee" StrokeShape="RoundRectangle 8" Padding="12,8">
+                <Label x:Name="RegistroErrorLabel" TextColor="#c62828"
+                       FontSize="13" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+            </Border>
 
             <!-- Botón Registrarse -->
             <Button Text="Crear Cuenta"

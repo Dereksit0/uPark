@@ -27,6 +27,11 @@
             Route="NotificacionesPage"/>
 
         <ShellContent
+            Title="Reservas"
+            ContentTemplate="{DataTemplate views:MisReservasPage}"
+            Route="MisReservasPage"/>
+
+        <ShellContent
             Title="Perfil"
             ContentTemplate="{DataTemplate views:MiCuentaPage}"
             Route="MiCuentaPage"/>
