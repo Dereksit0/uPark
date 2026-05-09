@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UPark.Views.EstacionamientoFavoritoPage"
+             BackgroundColor="#f5f5f5">
+
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsEnabled="False"/>
+    </Shell.BackButtonBehavior>
+    <Shell.TitleView>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="44"/>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="0" BackgroundColor="#1565c0" StrokeShape="RoundRectangle 8"
+                    Stroke="Transparent" Padding="12,7" Margin="8,0,0,0">
+                <HorizontalStackLayout Spacing="4">
+                    <Label Text="←" FontSize="15" TextColor="White" VerticalOptions="Center"/>
+                    <Label Text="Volver" FontSize="13" FontAttributes="Bold"
+                           TextColor="White" VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnNavVolverClicked"/>
+                </Border.GestureRecognizers>
+            </Border>
+            <Label Grid.Column="1" Text="Estacionamiento Favorito" FontSize="18"
+                   FontAttributes="Bold" TextColor="White"
+                   HorizontalOptions="Center" VerticalOptions="Center"/>
+        </Grid>
+    </Shell.TitleView>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Text="Selecciona tu estacionamiento preferido para acceder más rápido."
+                   FontSize="14" TextColor="Gray" HorizontalTextAlignment="Center"/>
+
+            <!-- Opción IMM -->
+            <Border x:Name="CardIMM" BackgroundColor="White"
+                    StrokeShape="RoundRectangle 15" Padding="0">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnSeleccionarIMM"/>
+                </Border.GestureRecognizers>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="120"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Image Source="imm.png" Aspect="AspectFill"/>
+                        <BoxView BackgroundColor="#1a237e" Opacity="0.45"/>
+                        <Label Text="IMM" FontSize="28" FontAttributes="Bold"
+                               TextColor="White" HorizontalOptions="Center"
+                               VerticalOptions="Center"/>
+                    </Grid>
+                    <Grid Grid.Row="1" Padding="15,12">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <VerticalStackLayout Grid.Column="0" Spacing="2">
+                            <Label Text="Estacionamiento IMM" FontSize="15"
+                                   FontAttributes="Bold" TextColor="#1a237e"/>
+                            <Label Text="Frente a la Universidad" FontSize="13" TextColor="Gray"/>
+                        </VerticalStackLayout>
+                        <Border x:Name="CheckIMM" Grid.Column="1" IsVisible="False"
+                                BackgroundColor="#1565c0" StrokeShape="RoundRectangle 20"
+                                WidthRequest="32" HeightRequest="32"
+                                VerticalOptions="Center">
+                            <Label Text="✓" TextColor="White" FontSize="16" FontAttributes="Bold"
+                                   HorizontalOptions="Center" VerticalOptions="Center"/>
+                        </Border>
+                    </Grid>
+                </Grid>
+            </Border>
+
+            <!-- Opción UMAD -->
+            <Border x:Name="CardUMAD" BackgroundColor="White"
+                    StrokeShape="RoundRectangle 15" Padding="0">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnSeleccionarUMAD"/>
+                </Border.GestureRecognizers>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="120"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Image Source="umad.png" Aspect="AspectFill"/>
+                        <BoxView BackgroundColor="#b71c1c" Opacity="0.45"/>
+                        <Label Text="UMAD" FontSize="28" FontAttributes="Bold"
+                               TextColor="White" HorizontalOptions="Center"
+                               VerticalOptions="Center"/>
+                    </Grid>
+                    <Grid Grid.Row="1" Padding="15,12">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <VerticalStackLayout Grid.Column="0" Spacing="2">
+                            <Label Text="Estacionamiento UMAD" FontSize="15"
+                                   FontAttributes="Bold" TextColor="#1a237e"/>
+                            <Label Text="Detrás de la Universidad" FontSize="13" TextColor="Gray"/>
+                        </VerticalStackLayout>
+                        <Border x:Name="CheckUMAD" Grid.Column="1" IsVisible="False"
+                                BackgroundColor="#1565c0" StrokeShape="RoundRectangle 20"
+                                WidthRequest="32" HeightRequest="32"
+                                VerticalOptions="Center">
+                            <Label Text="✓" TextColor="White" FontSize="16" FontAttributes="Bold"
+                                   HorizontalOptions="Center" VerticalOptions="Center"/>
+                        </Border>
+                    </Grid>
+                </Grid>
+            </Border>
+
+            <!-- Opción Ninguno -->
+            <Border BackgroundColor="White" StrokeShape="RoundRectangle 12" Padding="15,12">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnQuitarFavorito"/>
+                </Border.GestureRecognizers>
+                <HorizontalStackLayout Spacing="12">
+                    <Border BackgroundColor="#eeeeee" StrokeShape="RoundRectangle 8"
+                            WidthRequest="40" HeightRequest="40">
+                        <Label Text="✕" FontSize="18" TextColor="Gray"
+                               HorizontalOptions="Center" VerticalOptions="Center"/>
+                    </Border>
+                    <Label Text="Sin favorito" FontSize="15" TextColor="Gray"
+                           VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+            </Border>
+
+            <!-- Botón confirmar -->
+            <Button Text="Confirmar selección"
+                    BackgroundColor="#1565c0"
+                    TextColor="White"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    Clicked="OnConfirmarClicked"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

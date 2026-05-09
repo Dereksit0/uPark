@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="UPark.Views.LoginPage"
-             BackgroundColor="#1a237e">
+             BackgroundColor="#1a237e"
+             Shell.NavBarIsVisible="False">
 
     <ContentPage.Resources>
         <Style x:Key="EntryValido" TargetType="Entry">
@@ -26,8 +27,13 @@
         <ScrollView>
             <VerticalStackLayout Padding="30" Spacing="20" VerticalOptions="Center">
 
-                <Label Text="Acceso Estudiantes" FontSize="18"
-                       TextColor="#90caf9" HorizontalOptions="Center"/>
+                <!-- Logo y título -->
+                <Image Source="logoupark.png" HeightRequest="70" WidthRequest="70"
+                       HorizontalOptions="Center" Margin="0,20,0,0"/>
+                <Label Text="uPark" FontSize="32" FontAttributes="Bold"
+                       TextColor="White" HorizontalOptions="Center" CharacterSpacing="2"/>
+                <Label Text="Acceso Estudiantes" FontSize="15"
+                       TextColor="#90caf9" HorizontalOptions="Center" Margin="0,0,0,10"/>
 
                 <!-- Campo Matrícula solo números -->
                 <Border StrokeShape="RoundRectangle 10"
@@ -98,17 +104,19 @@
                                 </DataTrigger>
                             </Entry.Triggers>
                         </Entry>
-                        <!-- Ojito -->
-                        <Label x:Name="OjitoLabel"
-                               Grid.Column="1"
-                               Text="👁"
-                               FontSize="20"
-                               VerticalOptions="Center"
-                               Margin="0,0,10,0">
-                            <Label.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="OnOjitoTapped"/>
-                            </Label.GestureRecognizers>
-                        </Label>
+                        <!-- Botón mostrar/ocultar contraseña -->
+                        <Border Grid.Column="1" BackgroundColor="#e8eaf6"
+                                StrokeShape="RoundRectangle 6" Stroke="Transparent"
+                                Margin="0,6,8,6" Padding="10,0">
+                            <Label x:Name="OjitoLabel" Text="VER"
+                                   TextColor="#1565c0" FontSize="11" FontAttributes="Bold"
+                                   VerticalOptions="Center" WidthRequest="48"
+                                   HorizontalTextAlignment="Center">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnOjitoTapped"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </Border>
                     </Grid>
                 </Border>
 
@@ -119,6 +127,13 @@
                        FontSize="12"
                        IsVisible="False"
                        Margin="5,0"/>
+
+                <!-- Error general de login (usuario no encontrado / contraseña incorrecta) -->
+                <Border x:Name="LoginErrorPanel" IsVisible="False"
+                        BackgroundColor="#ffebee" StrokeShape="RoundRectangle 8" Padding="12,8">
+                    <Label x:Name="LoginErrorLabel" TextColor="#c62828"
+                           FontSize="13" HorizontalOptions="Center"/>
+                </Border>
 
                 <!-- Botón Login -->
                 <Button Text="Iniciar Sesión"

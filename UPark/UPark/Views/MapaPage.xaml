@@ -4,10 +4,31 @@
              x:Class="UPark.Views.MapaPage"
              BackgroundColor="#f5f5f5">
 
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsEnabled="False"/>
+    </Shell.BackButtonBehavior>
     <Shell.TitleView>
-        <Label x:Name="TituloEstacionamiento" Text="IMM Parking" FontSize="20"
-               FontAttributes="Bold" TextColor="White"
-               VerticalOptions="Center" HorizontalOptions="Center"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="44"/>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="0" BackgroundColor="#1565c0" StrokeShape="RoundRectangle 8"
+                    Stroke="Transparent" Padding="12,7" Margin="8,0,0,0">
+                <HorizontalStackLayout Spacing="4">
+                    <Label Text="←" FontSize="15" TextColor="White" VerticalOptions="Center"/>
+                    <Label Text="Volver" FontSize="13" FontAttributes="Bold"
+                           TextColor="White" VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnNavVolverClicked"/>
+                </Border.GestureRecognizers>
+            </Border>
+            <Label x:Name="TituloEstacionamiento" Grid.Column="1" Text="Estacionamiento"
+                   FontSize="18" FontAttributes="Bold" TextColor="White"
+                   HorizontalOptions="Center" VerticalOptions="Center"/>
+        </Grid>
     </Shell.TitleView>
 
     <RefreshView x:Name="RefreshControl" Refreshing="OnRefreshing">

@@ -11,6 +11,7 @@ public class UParkDbContext : DbContext
     public DbSet<Estacionamiento> Estacionamientos { get; set; }
     public DbSet<Espacio> Espacios { get; set; }
     public DbSet<Notificacion> Notificaciones { get; set; }
+    public DbSet<Reserva> Reservas { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -29,6 +30,17 @@ public class UParkDbContext : DbContext
             .HasOne(n => n.Usuario)
             .WithMany(u => u.Notificaciones)
             .HasForeignKey(n => n.Matricula);
+
+        // Reserva - Usuario y Espacio
+        modelBuilder.Entity<Reserva>()
+            .HasOne(r => r.Usuario)
+            .WithMany()
+            .HasForeignKey(r => r.Matricula);
+
+        modelBuilder.Entity<Reserva>()
+            .HasOne(r => r.Espacio)
+            .WithMany()
+            .HasForeignKey(r => r.IdEspacio);
 
         // Seed data - datos de prueba
         modelBuilder.Entity<Estacionamiento>().HasData(
