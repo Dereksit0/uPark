@@ -56,8 +56,10 @@ public partial class LoginPage : ContentPage
         bool existe = await _usuarioService.ExisteMatriculaAsync(MatriculaEntry.Text);
         if (!existe)
         {
-            MatriculaError.Text = "⚠ No existe ningún usuario con esa matrícula";
+            MatriculaError.Text = "⚠ Este usuario no existe";
             MatriculaError.IsVisible = true;
+            ContrasenaEntry.Text = string.Empty;
+            MatriculaEntry.Focus();
             return;
         }
 
@@ -65,9 +67,10 @@ public partial class LoginPage : ContentPage
         var usuario = await _usuarioService.LoginAsync(MatriculaEntry.Text, ContrasenaEntry.Text);
         if (usuario == null)
         {
-            LoginErrorLabel.Text = "⚠ Contraseña incorrecta. Intenta de nuevo.";
+            LoginErrorLabel.Text = "⚠ Contraseña incorrecta";
             LoginErrorPanel.IsVisible = true;
             ContrasenaEntry.Text = string.Empty;
+            ContrasenaEntry.Focus();
             return;
         }
 
